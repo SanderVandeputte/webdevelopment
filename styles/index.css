@@ -4,6 +4,7 @@ body {
     text-align: center;
     font-family: Arial, sans-serif;
 }
+
 ul {
     list-style-type: none;
     padding: 0;
@@ -11,4 +12,16 @@ ul {
 
 li {
     margin: 10px 0;
+}
+
+/* Links: vet, geen onderlijning, gecentreerd */
+a {
+    color: #004488;
+    font-weight: bold;
+    text-decoration: none;
+    display: block;
+}
+
+a:hover {
+    color: #002244;
 }
