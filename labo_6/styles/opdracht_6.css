@@ -1,0 +1,17 @@
+body {
+    font-size: 100px;
+}
+.checklist{
+    list-style: none;
+}
+li {
+    background-image: url("../afbeeldingen_labo_6/not_checked.png");
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 80px 80px;
+    padding-left: 100px;
+    line-height: 100px;
+}
+li.checked {
+    background-image: url("../afbeeldingen_labo_6/checked.png");
+}

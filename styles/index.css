@@ -24,3 +24,13 @@ a {
 a:hover {
     color: #002244;
 }
+
+.links_opdrachten{
+    font-size: 30px;
+}
+h1{
+    font-size: 5em;
+}
+
+.terugLink{
+padding-top: 50px}
