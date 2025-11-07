@@ -5,7 +5,6 @@ body {
     text-align: center;
     margin: 40px;
     font-size: 20px;
-    padding-bottom: 80px;
 }
 
 h1{
@@ -66,6 +65,7 @@ li {
 
 footer {
     position: fixed;
+    height: 50px;
     bottom: 0;
     left: 0;
     width: 100%;
