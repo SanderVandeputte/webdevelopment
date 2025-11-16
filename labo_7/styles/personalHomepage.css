@@ -1,0 +1,204 @@
+body {
+    background-color: lightblue;
+    color: darkblue;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 40px;
+    font-size: 20px;
+    padding: 100px;
+    padding-top: 0px;
+
+}
+
+h1{
+    margin-bottom: 20px;
+    font-size: 3em;
+
+}
+
+h2 {
+    margin-bottom: 20px;
+    font-size: 2em;
+
+}
+
+a {
+    color: #4169E1;
+    text-decoration: none;
+    display: inline-block;
+    margin: 10px auto;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+a:hover {
+    color: #002244;
+    text-decoration: underline;
+}
+
+img{
+    display: block;
+    margin: 10px auto;
+    border-radius: 5px;
+    box-shadow: 10px 10px 5px #888888;
+}
+
+video{
+    display: block;
+    margin: 10px auto;
+    border-radius: 5px;
+}
+
+  .fotoIk{
+    margin: 10px auto 40px auto;
+}
+
+ul, ol {
+    list-style-type: none;          /* opsommingsteken weg */
+    padding: 0;
+    margin: 0 auto;
+    max-width: 700px;
+    text-align: center;
+}
+
+li {
+    margin: 20px 0;
+    line-height: 1.6;
+}
+
+footer {
+    position: fixed;
+    height: 50px;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    /*border-radius: 5px;*/
+    text-align: center;
+    background: #004488;
+    color: white;
+    font-size: 0.9em;
+}
+
+table {
+    width: 90%;
+    margin: 0 auto;
+    border-radius: 20px;
+    overflow: hidden;
+    border-collapse: separate;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid black;
+}
+
+thead{
+    background: #004488;
+    color: white;
+}
+
+thead tr th:first-child {
+    border-top-left-radius: 20px;
+}
+
+thead tr th:last-child {
+    border-top-right-radius: 20px;
+}
+
+tbody tr:last-child td:first-child {
+    border-bottom-left-radius: 20px;
+}
+
+tbody tr:last-child td:last-child {
+    border-bottom-right-radius: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+.vrienden {
+    font: normal 18px/150% Arial, sans-serif;
+    background: #fff;
+    overflow: hidden;
+    border: 0;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin: 20px auto;
+    width: 90%;
+}
+
+.vrienden table {
+    border-collapse: separate;
+    border-spacing: 0;
+    text-align: center;
+    width: 100%;
+}
+
+.vrienden table td,
+.vrienden table th {
+    padding: 12px 15px;
+    border: 1px solid #004488;
+}
+
+.vrienden table thead th {
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #004488), color-stop(1, #4169E1));
+    background: -moz-linear-gradient(center top, #004488 5%, #4169E1 100%);
+    background: linear-gradient(to bottom, #004488 0%, #4169E1 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#004488', endColorstr='#4169E1');
+    background-color: #004488;
+    color: #FFFFFF;
+    font-size: 18px;
+    font-weight: normal;
+}
+
+.vrienden table tbody .alt td {
+    background: #E1EEF4;
+    color: #1A009E;
+}
+
+.vrienden table thead th:first-child {
+    border-top-left-radius: 20px;
+}
+
+.vrienden table thead th:last-child {
+    border-top-right-radius: 20px;
+}
+
+.vrienden table tbody td {
+    color: #000000;
+    font-size: 18px;
+    font-weight: normal;
+}
+
+.vrienden table tbody tr:nth-child(even) td {
+    background-color: #dbe9f4;
+}
+
+.vrienden table tbody tr:nth-child(odd) td {
+    background-color: #ffffff;
+}
+
+.vrienden table tbody tr:last-child td:first-child {
+    border-bottom-left-radius: 20px;
+}
+
+.vrienden table tbody tr:last-child td:last-child {
+    border-bottom-right-radius: 20px;
+}
+
+
+.vrienden table tbody tr.alt td .onbekend, .vrienden table tbody tr td .onbekend {
+    background-color: red;
+    color: white;
+}
+
