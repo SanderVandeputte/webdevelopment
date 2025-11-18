@@ -196,9 +196,9 @@ tbody tr:last-child td:last-child {
     border-bottom-right-radius: 20px;
 }
 
-
-.vrienden table tbody tr.alt td .onbekend, .vrienden table tbody tr td .onbekend {
+.vrienden table tbody tr.alt td.onbekend, .vrienden table tbody tr td.onbekend {
     background-color: red;
     color: white;
 }
+
 
