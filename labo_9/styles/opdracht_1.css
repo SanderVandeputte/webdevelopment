@@ -1,0 +1,31 @@
+article {
+    border: 1px solid black;
+    height: 250px;
+    padding: 10px;
+    margin: 10px;
+    background-color: #e0e0e0;
+}
+
+article img {
+    margin-right: 10px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+p {
+    font-size: 1.25em;
+}
+
+h2 {
+    margin-top: 0;
+}
+
+article:nth-child(odd) img {
+    float: left;
+}
+
+article:nth-child(even) img {
+    float: right;
+}
