@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="nl">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Voor Jou ❤️</title>
+    <style>
+        body{
+            margin:0; padding:0; font-family:'Georgia',serif;
+            background:linear-gradient(135deg,#ffe5ec,#ffd6e6,#fff0f5);
+            background-repeat:no-repeat;
+            background-attachment:fixed;
+            background-size:cover;
+            color:#4b2b36; text-align:center;
+            overflow-x:hidden;
+        }
+
+        #start, .card{
+            background:white;
+            padding:40px;
+            border-radius:28px;
+            box-shadow:0 12px 40px rgba(0,0,0,0.12);
+            width:90%;
+            max-width:760px;
+            margin:80px auto;
+        }
+
+        .heart{
+            color:#FF6B8AFF;
+        }
+
+        #start button{
+            background:#ff6b8a; border:0; padding:14px 26px; border-radius:14px;
+            color:white; font-size:20px; cursor:pointer; margin-top:20px;
+            box-shadow:0 6px 20px rgba(255,107,138,0.3);
+            transition:transform .2s;
+        }
+        #start button:hover{ transform:scale(1.07); }
+
+        .card{ display:none; }
+
+        h1{font-size:42px; margin-bottom:14px;}
+        p{font-size:22px; line-height:1.7; margin-bottom:20px;}
+        .heart{font-size:60px; margin:20px 0; animation:pulse 1.8s infinite;}
+
+        @keyframes pulse{0%{transform:scale(1);}50%{transform:scale(1.18);}100%{transform:scale(1);} }
+        @keyframes fadeIn{from{opacity:0; transform:translateY(20px);}to{opacity:1;} }
+
+        .floating-heart{
+            position:fixed; bottom:-50px;
+            font-size:24px; color:#ff4d6d;
+            animation:floatUp linear forwards;
+            opacity:0.9;
+        }
+        @keyframes floatUp{
+            from{transform:translateY(0) translateX(0); opacity:0.9;}
+            to{transform:translateY(-120vh) translateX(var(--x-move)); opacity:0;} }
+
+        .signature{margin-top:32px; font-size:24px; font-style:italic;}
+
+        @media(max-width:600px){
+            #start, .card{ padding:26px; margin:40px auto; }
+            h1{ font-size:30px; }
+            p{ font-size:18px; line-height:1.55; }
+            .heart{ font-size:46px; }
+        }
+    </style>
+</head>
+<body>
+<div id="start">
+    <h2>Ik heb iets gemaakt</h2>
+    <h2>speciaal voor jou… ❤️</h2>
+    <p>Klik hieronder…</p>
+    <button onclick="showMessage()">Open mijn verrassing</button>
+</div>
+
+<div class="card" id="card">
+    <div class="heart">❤</div>
+    <h1>Voor jou, mijn allerliefste</h1>
+
+    <p>
+        Vandaag wilde ik iets doen dat een beetje anders is… iets dat laat zien hoeveel jij echt voor mij betekent.
+        Je verdient iets moois, iets liefs, iets dat speciaal voor jou gemaakt is — en daarom maakte ik dit kleine hoekje van het internet alleen voor jou.
+    </p>
+
+    <p>
+        Jij bent iemand die mijn dagen lichter maakt zonder dat je het doorhebt. Je lacht op manieren die ik nooit beu word,
+        je bent zacht op momenten dat ik het nodig heb, en je geeft mij een gevoel van thuis dat ik nooit eerder heb gevoeld.
+    </p>
+
+    <p>
+        Elke maand die voorbijgaat met jou voelt als een cadeau. En ik meen dat echt.
+        Met jou samen zijn voelt warm, veilig en vrolijk — zelfs op dagen dat het wat moeilijker gaat. Jij bent mijn rustpunt.
+    </p>
+
+    <div style="margin:30px 0; display:flex; flex-direction:column; align-items:center; gap:24px;">
+        <img src="foto1.jpg" alt="Wij samen" style="width:100%; max-width:480px; border-radius:20px; box-shadow:0 8px 30px rgba(0,0,0,0.15);">
+        <img src="foto2.jpg" alt="Wij nog eens" style="width:100%; max-width:480px; border-radius:20px; box-shadow:0 8px 30px rgba(0,0,0,0.15);">
+    </div>
+
+    <p>
+        Ik ben trots op ons. Trots op onze momenten, onze grappen, onze gesprekken, onze stilte, alles.
+        Ik ben vooral trots op wie jij bent — iemand mooi vanbinnen en vanbuiten.
+    </p>
+
+    <p>
+        Dank je wel om in mijn leven te zijn. Voor alles wat je bent en alles wat je geeft zonder dat je het beseft.
+        Ik kijk uit naar alles wat nog komt… zolang het maar met jou is.
+    </p>
+
+    <p class="signature">Altijd jouw,<br>liefje</p>
+</div>
+
+<script>
+    function showMessage(){
+        document.getElementById('start').style.display='none';
+        document.getElementById('card').style.display='block';
+        startHearts();
+    }
+
+    function startHearts(){
+        for(let i=0;i<30;i++){
+            setTimeout(()=>createHeart(), i*200);
+        }
+    }
+
+    function createHeart(){
+        const heart=document.createElement('div');
+        heart.classList.add('floating-heart');
+        heart.textContent='❤';
+        const size=Math.random()*20+20;
+        heart.style.fontSize=size+'px';
+        heart.style.left=Math.random()*100+'vw';
+        heart.style.setProperty('--x-move', (Math.random()*60-30)+'vw');
+        heart.style.animationDuration=(4+Math.random()*3)+'s';
+        document.body.appendChild(heart);
+        setTimeout(()=>heart.remove(),7000);
+    }
+</script>
+</body>
+</html>

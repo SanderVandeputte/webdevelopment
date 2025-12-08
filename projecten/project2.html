@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="nl">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Voor jou, [haar naam]</title>
+    <style>
+        *{box-sizing:border-box;margin:0;padding:0;}
+
+        body{
+            font-family:"Georgia",serif;
+            background:#f7f2f0;
+            color:#2f1e25;
+            min-height:100vh;
+            display:flex;
+            justify-content:center;
+            padding:24px 12px;
+        }
+
+        .layout{
+            display:flex;
+            width:100%;
+            max-width:960px;
+            background:#fff;
+            box-shadow:0 10px 40px rgba(0,0,0,0.08);
+            border-radius:0;
+        }
+
+        .side{
+            width:80px;
+            background:linear-gradient(180deg,#f3c6cf,#f7a0b8);
+        }
+
+        .side-inner{
+            height:100%;
+            display:flex;
+            flex-direction:column;
+            align-items:center;
+            justify-content:center;
+            padding:20px 10px;
+            color:#4b2032;
+            font-size:14px;
+            letter-spacing:2px;
+            text-transform:uppercase;
+        }
+
+        .side-inner span{
+            writing-mode:vertical-rl;
+            text-orientation:mixed;
+        }
+
+        .content{
+            flex:1;
+            padding:26px 18px 26px 26px;
+        }
+
+        @media(min-width:800px){
+            .content{
+                padding:40px 48px 34px 40px;
+            }
+        }
+
+        .label{
+            font-size:13px;
+            letter-spacing:2px;
+            text-transform:uppercase;
+            color:#b08a97;
+            margin-bottom:8px;
+        }
+
+        h1{
+            font-size:26px;
+            margin-bottom:18px;
+            color:#4b2d39;
+        }
+
+        p{
+            font-size:18px;
+            line-height:1.8;
+            margin-bottom:14px;
+        }
+
+        .highlight{
+            color:#c93f64;
+            font-weight:bold;
+        }
+
+        .signature{
+            margin-top:22px;
+            font-size:18px;
+            font-style:italic;
+        }
+
+        .name-line{
+            margin-top:6px;
+        }
+
+        @media(max-width:650px){
+            .layout{
+                flex-direction:column;
+            }
+            .side{
+                width:100%;
+                height:40px;
+            }
+            .side-inner{
+                flex-direction:row;
+                justify-content:flex-start;
+            }
+            .side-inner span{
+                writing-mode:horizontal-tb;
+                text-orientation:initial;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="layout">
+    <div class="side">
+        <div class="side-inner">
+            <span>VOOR JOU</span>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="label">Liefdesnota</div>
+        <h1>Liefste [haar naam],</h1>
+
+        <p>
+            Dit is geen grote website, geen speciaal effect en geen gedoe. Het is gewoon
+            één rustig blaadje, met wat ik je eigenlijk gewoon wil zeggen:
+            <span class="highlight">ik zie je heel, heel graag</span>.
+        </p>
+
+        <p>
+            Sinds jij in mijn leven bent, voelt alles anders. Niet ineens perfect,
+            maar wel warmer, zachter en lichter. Je bent er op manieren die je zelf
+            misschien niet altijd doorhebt, maar die voor mij enorm veel betekenen.
+        </p>
+
+        <p>
+            Ik hou van je lach, van hoe je praat, van je humor en van je kleine gewoontes.
+            Van de momenten waarop je serieus bent en van de momenten waarop je een beetje
+            gek doet. Bij jou mag ik mezelf zijn, en dat is één van de mooiste dingen die er zijn.
+        </p>
+
+        <p>
+            Ik ben trots op ons. Op onze gesprekken, op onze stiltes die niet ongemakkelijk zijn,
+            op onze kleine grapjes en alles wat alleen wij begrijpen. Dat maakt ons “wij”,
+            en daar ben ik dankbaar voor.
+        </p>
+
+        <p>
+            Als je je ooit afvraagt hoe graag ik je zie: meer dan in één berichtje past,
+            meer dan ik hier kan opschrijven. Jij bent iemand die mijn hart raakt,
+            elke dag opnieuw.
+        </p>
+
+        <p>
+            Dank je wel dat je in mijn leven bent. Dank je wel dat je mij toelaat dicht bij je
+            te staan. Het lijkt misschien gewoon, maar voor mij is het dat niet.
+        </p>
+
+        <div class="signature">
+            Altijd jouw,
+            <div class="name-line">[jouw naam]</div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

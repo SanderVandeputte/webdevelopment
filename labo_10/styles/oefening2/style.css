@@ -1,0 +1,23 @@
+body {
+    margin: 0;
+    overflow-x: hidden;
+}
+
+h1 {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.row > div {
+    background-color: #e3e6ea;
+    padding: 10px;
+    height: 120px;
+    font-weight: bold;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.row > div:nth-child(2),
+.row > div:nth-child(4) {
+    background-color: #b5bbc2;
+}
