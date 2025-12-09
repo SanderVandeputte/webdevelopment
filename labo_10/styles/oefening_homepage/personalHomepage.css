@@ -38,8 +38,9 @@ img {
     margin: 10px auto;
     border-radius: 5px;
     box-shadow: 10px 10px 5px #888888;
-    width: auto;
-    height: 250px;
+    width: 100%;        /* past zich aan aan de bootstrap kolom */
+    height: auto;       /* behoudt verhouding */
+    max-width: 250px;   /* voorkomt te grote foto's op desktop */
 }
 
 video {
@@ -52,6 +53,7 @@ video {
 
 .fotoIk {
     margin: 10px auto 40px auto;
+
 }
 
 ul, ol {
@@ -188,33 +190,3 @@ tbody tr:last-child td:last-child {
     color: white;
 }
 
-@media (max-width: 768px) {
-    body { font-size: 16px; margin: 20px; }
-    h1 { font-size: 2em; }
-    h2 { font-size: 1.6em; }
-    footer { font-size: 0.8em; }
-
-    .vrienden {
-        overflow-x: auto;
-        -webkit-overflow-scrolling: touch;
-    }
-
-    .vrienden table {
-        min-width: 700px;
-        white-space: nowrap;
-    }
-
-
-}
-
-@media (min-width: 768px) and (max-width: 992px) {
-    body { font-size: 18px; }
-    h1 { font-size: 2.5em; }
-    h2 { font-size: 1.8em; }
-}
-
-@media (min-width: 992px) {
-    body { font-size: 20px; }
-    h1 { font-size: 3em; }
-    h2 { font-size: 2em; }
-}
