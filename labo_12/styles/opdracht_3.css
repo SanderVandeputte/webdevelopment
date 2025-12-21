@@ -41,8 +41,8 @@ footer {
 main {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     background-color: #808080;
+    justify-content: center;
 }
 
 @media screen and (min-width: 700px) {
@@ -60,7 +60,8 @@ main > div {
     flex-direction: column;
 }
 
-main > div > img, main > div > p {
+main > div > img,
+main > div > p {
     padding: 0;
 }
 

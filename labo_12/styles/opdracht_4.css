@@ -35,23 +35,16 @@ body {
   min-block-size: 100vh;
   margin: 0;
 
-  /* zorg dat section-block in het midden komt */
-
 }
 
 
 
-/* profilecard krijgt afgeronde hoeken */
 .card {
   background: url('../images/bg-pattern-card.svg') no-repeat, white;
   border-radius: .5em;
   min-block-size: 20rem;
   inline-size: 100%;
   max-inline-size: 350px;
-
- /* tip: gebruik flex-direction"  */
-
-
 }
 
 .card .profile-picture-wrapper {
@@ -68,7 +61,6 @@ body {
   display: inline-block;
 }
 
-/* foto krijgt een cirkelvorm */
 .card img {
   border-radius: 100%;
   border: .25em solid white;
@@ -82,9 +74,6 @@ body {
   font-size: .75rem;
   inline-size: 100%;
   padding: 2em;
-/* zorg dat de statistische gegevens horizontaal komen */
-
-
 }
 
 .stats {

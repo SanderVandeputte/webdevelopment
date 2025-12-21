@@ -19,8 +19,10 @@ a {
 
 .container {
     width: 80%;
-    margin: 0 auto;
+    display: flex;
+    justify-content: center;
 }
+
 
 .card {
     background: rgba(255, 255, 255, 0.2);
@@ -28,6 +30,8 @@ a {
     padding: 20px;
     border-radius: 4px;
     text-align: center;
+    align-self: center;
+
 
 }
 
@@ -64,12 +68,4 @@ a {
     padding: 10px;
     color: white;
     border-radius: 4px;
-}
-
-.container {
-    display: flex;
-    flex-direction: row;}
-
-.card {
-    align-self: center;
 }
