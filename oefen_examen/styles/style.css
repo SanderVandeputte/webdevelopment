@@ -1,0 +1,165 @@
+body {
+    font-family: "Segoe UI", Roboto, Arial, sans-serif;
+    margin: 0;
+    padding: 40px;
+    background-color: #f4f6f8;
+    color: #2c2c2c;
+    line-height: 1.6;
+}
+
+h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+h2 {
+    margin-top: 60px;
+    border-bottom: 3px solid #1f4fd8;
+    padding-bottom: 5px;
+    color: #1f4fd8;
+}
+
+h3 {
+    margin-top: 0;
+    color: #333;
+}
+
+b + h1,
+b + h1 + h2,
+b + h1 + h2 + h3,
+b + h1 + h2 + h3 + h4,
+b + h1 + h2 + h3 + h4 + h5,
+b + h1 + h2 + h3 + h4 + h5 + h6 {
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-top: initial;
+    color: inherit;
+}
+
+p {
+    max-width: 1000px;
+}
+
+b > p {
+    margin-top: 80px;
+    margin-bottom: 30px;
+    font-size: 42px !important;
+    color: #1f4fd8;
+}
+
+hr {
+    border: none;
+    height: 4px;
+    background: linear-gradient(to right, #1f4fd8, #6fa8ff);
+    margin: 80px 0;
+}
+
+.voorbeeld {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+}
+
+.voorbeeld .code,
+.voorbeeld .output {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 20px;
+    flex: 1;
+    min-width: 300px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+.voorbeeld pre {
+    background: #1e1e1e;
+    color: #f8f8f2;
+    padding: 15px;
+    border-radius: 10px;
+    font-family: Consolas, monospace;
+    font-size: 15px;
+    overflow-x: auto;
+}
+
+ul, ol {
+    margin-left: 25px;
+}
+
+li {
+    margin-bottom: 6px;
+}
+
+table {
+    border-collapse: collapse;
+    background: #ffffff;
+    margin: 20px 0;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+th {
+    background-color: #1f4fd8;
+    color: white;
+    padding: 12px;
+}
+
+td {
+    padding: 10px 12px;
+    border: 1px solid #ddd;
+}
+
+form {
+    margin-top: 10px;
+}
+
+input,
+select,
+textarea {
+    padding: 8px 10px;
+    margin-top: 5px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 15px;
+}
+
+input[type="submit"] {
+    background-color: #1f4fd8;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #163bb0;
+}
+
+img,
+video,
+audio,
+canvas {
+    border-radius: 8px;
+}
+
+center {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+mark {
+    background-color: #ffe58f;
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+@media (max-width: 900px) {
+    body {
+        padding: 20px;
+    }
+
+    .voorbeeld {
+        flex-direction: column;
+    }
+}

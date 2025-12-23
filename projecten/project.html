@@ -3,6 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
     <title>Voor Jou ❤️</title>
     <style>
         body{
@@ -34,27 +35,58 @@
             color:white; font-size:20px; cursor:pointer; margin-top:20px;
             box-shadow:0 6px 20px rgba(255,107,138,0.3);
             transition:transform .2s;
+            background: linear-gradient(135deg, #ff6b8a, #ff85a0);
+            position: relative;
+            overflow: hidden;
         }
+        #start button::after {
+            content: "";
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.4) 0%, transparent 70%);
+            animation: shine 3s infinite;
+        }
+        @keyframes shine {
+            0% { transform: translateX(-100%) translateY(-100%); }
+            100% { transform: translateX(100%) translateY(100%); }
+        }
+
         #start button:hover{ transform:scale(1.07); }
 
-        .card{ display:none; }
+        .card {
+            display: none;
+            animation: fadeIn 1.5s ease forwards;
+        }
 
         h1{font-size:42px; margin-bottom:14px;}
-        p{font-size:22px; line-height:1.7; margin-bottom:20px;}
-        .heart{font-size:60px; margin:20px 0; animation:pulse 1.8s infinite;}
+        p{font-size:22px; line-height:1.7; margin-bottom:20px;opacity: 0; animation: fadeIn 1.2s ease forwards;
+        }
+        p:nth-of-type(1) { animation-delay: 0.5s; }
+        p:nth-of-type(2) { animation-delay: 1s; }
+        p:nth-of-type(3) { animation-delay: 1.5s; }
+        p:nth-of-type(4) { animation-delay: 2s; }
+
+        .heart{font-size:60px; margin:20px 0; animation:pulse 2.2s infinite;}
 
         @keyframes pulse{0%{transform:scale(1);}50%{transform:scale(1.18);}100%{transform:scale(1);} }
         @keyframes fadeIn{from{opacity:0; transform:translateY(20px);}to{opacity:1;} }
 
         .floating-heart{
-            position:fixed; bottom:-50px;
-            font-size:24px; color:#ff4d6d;
-            animation:floatUp linear forwards;
+            position:fixed;
+            bottom:-50px;
+            font-size:24px;
             opacity:0.9;
+            animation:floatUp linear forwards;
         }
+
         @keyframes floatUp{
-            from{transform:translateY(0) translateX(0); opacity:0.9;}
-            to{transform:translateY(-120vh) translateX(var(--x-move)); opacity:0;} }
+            from{transform:translateY(0) translateX(0); opacity:1;}
+            to{transform:translateY(-160vh) translateX(var(--x-move)); opacity:0.4;}
+        }
+
 
         .signature{margin-top:32px; font-size:24px; font-style:italic;}
 
@@ -64,6 +96,11 @@
             p{ font-size:18px; line-height:1.55; }
             .heart{ font-size:46px; }
         }
+
+
+
+
+
     </style>
 </head>
 <body>
@@ -80,36 +117,37 @@
 
     <p>
         Vandaag wilde ik iets doen dat een beetje anders is… iets dat laat zien hoeveel jij echt voor mij betekent.
-        Je verdient iets moois, iets liefs, iets dat speciaal voor jou gemaakt is — en daarom maakte ik dit kleine hoekje van het internet alleen voor jou.
+        Geen briefje of kaartje deze keer. Maar iets dat ik speciaal voor jou gemaakt heb.
+        Ik dacht: laat mij mijn webdevelopment skills eens gebruiken om iets te maken dat recht uit mijn hart komt.
     </p>
 
     <p>
-        Jij bent iemand die mijn dagen lichter maakt zonder dat je het doorhebt. Je lacht op manieren die ik nooit beu word,
-        je bent zacht op momenten dat ik het nodig heb, en je geeft mij een gevoel van thuis dat ik nooit eerder heb gevoeld.
+        Vandaag, precies 4 maanden geleden, begon ons verhaal. De dag dat je ja zei.
+        De tijd is voorbijgevlogen, en elke dag samen met jou voelt bijzonder.
+        Ik kijk altijd uit naar het weekend, gewoon omdat ik jou dan weer kan zien.
     </p>
 
     <p>
-        Elke maand die voorbijgaat met jou voelt als een cadeau. En ik meen dat echt.
-        Met jou samen zijn voelt warm, veilig en vrolijk — zelfs op dagen dat het wat moeilijker gaat. Jij bent mijn rustpunt.
+        Bij jou voel ik me echt op mijn gemak. Bij jou kan ik gewoon mezelf zijn, zonder nadenken of twijfelen.
+        Ook op moeilijkere momenten zijn we er voor elkaar, en dat betekent meer voor mij dan ik soms in woorden kan uitleggen.
     </p>
 
-    <div style="margin:30px 0; display:flex; flex-direction:column; align-items:center; gap:24px;">
-        <img src="foto1.jpg" alt="Wij samen" style="width:100%; max-width:480px; border-radius:20px; box-shadow:0 8px 30px rgba(0,0,0,0.15);">
-        <img src="foto2.jpg" alt="Wij nog eens" style="width:100%; max-width:480px; border-radius:20px; box-shadow:0 8px 30px rgba(0,0,0,0.15);">
+    <div style="margin:30px 0;">
+        <div class="heart" style="font-size:100px; color:#ed4f6d;">❤</div>
     </div>
 
-    <p>
-        Ik ben trots op ons. Trots op onze momenten, onze grappen, onze gesprekken, onze stilte, alles.
-        Ik ben vooral trots op wie jij bent — iemand mooi vanbinnen en vanbuiten.
-    </p>
 
     <p>
-        Dank je wel om in mijn leven te zijn. Voor alles wat je bent en alles wat je geeft zonder dat je het beseft.
-        Ik kijk uit naar alles wat nog komt… zolang het maar met jou is.
+        Ik ben zo blij met alles wat we samen meemaken en met jou, precies zoals je bent.
+        Dank je wel dat je er altijd voor mij bent en gewoon deel uitmaakt van mijn leven.
+        Ik kijk uit naar alles wat nog komt, zolang ik het met jou kan beleven, is dat alles wat ik wil.
     </p>
 
-    <p class="signature">Altijd jouw,<br>liefje</p>
+    <p
+            class="signature">Ik zie je echt supergraag! <br> dikke knuffel en kus <span style="font-style: normal;">😘</span>,<br>Sander
+    </p>
 </div>
+
 
 <script>
     function showMessage(){
@@ -125,17 +163,34 @@
     }
 
     function createHeart(){
-        const heart=document.createElement('div');
+        const heart = document.createElement('div');
         heart.classList.add('floating-heart');
-        heart.textContent='❤';
-        const size=Math.random()*20+20;
-        heart.style.fontSize=size+'px';
-        heart.style.left=Math.random()*100+'vw';
-        heart.style.setProperty('--x-move', (Math.random()*60-30)+'vw');
-        heart.style.animationDuration=(4+Math.random()*3)+'s';
+        heart.textContent = '❤';
+        const size = Math.random() * 20 + 20; // van 20px tot 40px
+        heart.style.fontSize = size + 'px';
+        heart.style.left = Math.random() * 100 + 'vw';
+        heart.style.setProperty('--x-move', (Math.random() * 60 - 30) + 'vw');
+        heart.style.animationDuration = (4 + Math.random() * 3) + 's';
+        const colors = ['#ff4d6d', '#ff6b8a', '#ff85a0', '#ffb0c1'];
+        heart.style.color = colors[Math.floor(Math.random() * colors.length)];
         document.body.appendChild(heart);
-        setTimeout(()=>heart.remove(),7000);
+
+        setTimeout(() => heart.remove(), 7000);
     }
+
+
+
+
+
+    function showMessage(){
+        const start = document.getElementById('start');
+        const card = document.getElementById('card');
+        start.style.display = 'none';
+        card.style.display = 'block';
+        card.style.animation = 'fadeIn 1.5s ease forwards';
+        startHearts();
+    }
+
 </script>
 </body>
 </html>

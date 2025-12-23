@@ -1,0 +1,1282 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examen samenvatting HTML</title>
+    <link rel="stylesheet" href="styles/style.css">
+
+</head>
+
+<body>
+<h1>Hoofdstuk 1 webdevelopment: HTML</h1>
+<p>Dit is een korte samenvatting van de te kennen zaken van hoofdstuk 1: HTML</p>
+
+<hr size="5" color="black">
+
+<b>
+    <p style="font-size: 50px;">De verschillende H-elementen</p>
+</b>
+
+<h1>Heading1</h1>
+<h2>Heading2</h2>
+<h3>Heading3</h3>
+<h4>Heading4</h4>
+<h5>Heading5</h5>
+<h6>Heading6</h6>
+
+<hr size="5" color="black">
+
+<b>
+    <p style="font-size: 50px;">Entity Reference's</p>
+</b>
+
+<ul style="font-size: 30px;">
+    <li>&copy; = &amp;copy;</li>
+    <li>&deg; = &amp;deg;</li>
+    <li>&plusmn; = &amp;plusmn;</li>
+    <li>&egrave; = &amp;egrave;</li>
+    <li>&eacute; = &amp;eacute;</li>
+    <li>&ecirc; = &amp;ecirc;</li>
+    <li>&euml; = &amp;euml;</li>
+    <li>&Egrave; = &amp;Egrave;</li>
+    <li>&Eacute; = &amp;Eacute;</li>
+    <li>&Ecirc; = &amp;Ecirc;</li>
+    <li>&Euml; = &amp;Euml;</li>
+    <li>&tilde; = &amp;tilde;</li>
+    <li>&euro; = &amp;euro;</li>
+</ul>
+
+<hr size="5" color="black">
+
+<b>
+    <p style="font-size: 50px;">Deprecated HTML-elementens</p>
+</b>
+
+<center>
+    <p>tekst gecentreerd door gebruik te maken van ""<b>&lt;center&gt; &lt;/center&gt;</b>"" . Werkt voor zowel
+        tekst,
+        afbeeldingen, ...</p>
+    <img src="img.png" alt="afbeelding" width="200" height="150">
+</center>
+
+<br><br>
+
+<p><s>doorstreepte tekst</s> door gebruik te maken van ""<b>&lt;s&gt; &lt;/s&gt;</b>""</p>
+
+<hr size="5" color="black">
+
+<b>
+    <p style="font-size: 50px;">Gestructureerde tekst</p>
+</b>
+
+<em>tekst met het gebruiken van ""<b>&lt;em&gt; &lt;/em&gt;</b>""</em>
+<br><br>
+<strong>tekst met het gebruiken van ""<b>&lt;strong&gt; &lt;/strong&gt;</b>""</strong>
+<br><br>
+<code>tekst met het gebruiken van ""<b>&lt;code&gt; &lt;/code&gt;</b>""</code>
+<br><br>
+<mark>tekst met het gebruiken van ""<b>&lt;mark&gt; &lt;/mark&gt;</b>""</mark>
+
+<hr size="5" color="black">
+
+<b>
+    <p style="font-size: 50px;">Lijsten</p>
+</b>
+
+<h2>1.1 Normaal genummerde Lijst (<b>&lt;ol&gt; &lt;/ol&gt;</b>):</h2>
+
+<div class="voorbeeld">
+    <!-- Links: de code -->
+    <div class="code">
+        <h3>HTML Code:</h3>
+        <pre><code>
+&lt;ol&gt;
+    &lt;li&gt;Eerste item&lt;/li&gt;
+    &lt;li&gt;Tweede item&lt;/li&gt;
+    &lt;li&gt;Derde item&lt;/li&gt;
+&lt;/ol&gt;
+        </code></pre>
+    </div>
+
+    <!-- Rechts: de output -->
+    <div class="output">
+        <h3>Output:</h3>
+        <ol>
+            <li>Eerste item</li>
+            <li>Tweede item</li>
+            <li>Derde item</li>
+        </ol>
+    </div>
+</div>
+
+
+
+<h2>1.2 Genest genummerde Lijst (<b>&lt;ol&gt; &lt;/ol&gt;</b>):</h2>
+
+<div class="voorbeeld">
+    <!-- Links: de code -->
+    <div class="code">
+        <h3>HTML Code:</h3>
+        <pre><code>
+&lt;ol&gt;
+    &lt;li&gt;Dit is optie 1&lt;/li&gt;
+    &lt;li&gt;Dit is een optie met extra opties eronder:
+        &lt;ol&gt;
+            &lt;li&gt;Nummer 1&lt;/li&gt;
+            &lt;li&gt;Nummer 2&lt;/li&gt;
+        &lt;/ol&gt;
+    &lt;/li&gt;
+    &lt;li&gt;En hier is optie 3.&lt;/li&gt;
+&lt;/ol&gt;
+        </code></pre>
+    </div>
+
+    <!-- Rechts: de output -->
+    <div class="output">
+        <h3>Output:</h3>
+        <ol>
+            <li>Dit is optie 1</li>
+            <li>Dit is een optie met extra opties eronder:
+                <ol>
+                    <li>Nummer 1</li>
+                    <li>Nummer 2</li>
+                </ol>
+            </li>
+            <li>En hier is optie 3.</li>
+        </ol>
+    </div>
+</div>
+
+
+
+<h2>2.1 Normaal genummerde Lijst (<b>&lt;ul&gt; &lt;/ul&gt;</b>):</h2>
+<div class="voorbeeld">
+    <!-- Links: de code -->
+    <div class="code">
+        <h3>HTML Code:</h3>
+        <pre><code>
+&lt;ul&gt;
+    &lt;li&gt;Eerste item&lt;/li&gt;
+    &lt;li&gt;Tweede item&lt;/li&gt;
+    &lt;li&gt;Derde item&lt;/li&gt;
+&lt;/ul&gt;
+        </code></pre>
+    </div>
+
+    <!-- Rechts: de output -->
+    <div class="output">
+        <h3>Output:</h3>
+        <ul>
+            <li>Eerste item</li>
+            <li>Tweede item</li>
+            <li>Derde item</li>
+        </ul>
+    </div>
+</div>
+
+
+
+<h2>2.2 Geneste ongenummerde Lijst (<b>&lt;ul&gt; &lt;/ul&gt;</b>):</h2>
+
+<div class="voorbeeld">
+    <!-- Links: de code -->
+    <div class="code">
+        <h3>HTML Code:</h3>
+        <pre><code>
+&lt;ul&gt;
+    &lt;li&gt;Dit is optie 1&lt;/li&gt;
+    &lt;li&gt;Dit is een optie met extra opties eronder:
+        &lt;ul&gt;
+            &lt;li&gt;Nummer 1&lt;/li&gt;
+            &lt;li&gt;Nummer 2&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;En hier is optie 3.&lt;/li&gt;
+&lt;/ul&gt;
+        </code></pre>
+    </div>
+
+    <!-- Rechts: de output -->
+    <div class="output">
+        <h3>Output:</h3>
+        <ul>
+            <li>Dit is optie 1</li>
+            <li>Dit is een optie met extra opties eronder:
+                <ul>
+                    <li>Nummer 1</li>
+                    <li>Nummer 2</li>
+                </ul>
+            </li>
+            <li>En hier is optie 3.</li>
+        </ul>
+    </div>
+</div>
+
+
+
+<h2>3 Definitielijst (<b>&lt;dl&gt; &lt;/dl&gt;</b>):</h2>
+
+<div class="voorbeeld">
+    <!-- Links: de code -->
+    <div class="code">
+        <h3>HTML Code:</h3>
+        <pre><code>
+&lt;dl&gt;
+    &lt;dt&gt;HTML&lt;/dt&gt;
+    &lt;dd&gt;HyperText Markup Language&lt;/dd&gt;
+    &lt;dt&gt;CSS&lt;/dt&gt;
+    &lt;dd&gt;Cascade Stylesheets&lt;/dd&gt;
+    &lt;dt&gt;DOM&lt;/dt&gt;
+    &lt;dd&gt;Data Object Model&lt;/dd&gt;
+&lt;/dl&gt;
+        </code></pre>
+    </div>
+
+    <!-- Rechts: de output -->
+    <div class="output">
+        <h3>Output:</h3>
+        <dl>
+            <dt>HTML</dt>
+            <dd>HyperText Markup Language</dd>
+            <dt>CSS</dt>
+            <dd>Cascade Stylesheets</dd>
+            <dt>DOM</dt>
+            <dd>Data Object Model</dd>
+        </dl>
+    </div>
+</div>
+
+
+
+<hr size="5" color="black">
+
+<b>
+    <p style="font-size: 50px;">Semantische elementen</p>
+</b>
+
+<table border="5px" cellpadding="8" cellspacing="0">
+    <thead>
+    <tr>
+        <th>Element</th>
+        <th>Beschrijving</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>&lt;header&gt;</td>
+        <td>Definieert een koptekst voor een document of een sectie</td>
+    </tr>
+    <tr>
+        <td>&lt;nav&gt;</td>
+        <td>Definieert een navigatiegedeelte met links</td>
+    </tr>
+    <tr>
+        <td>&lt;main&gt;</td>
+        <td>Geeft de hoofdinhoud van de pagina aan</td>
+    </tr>
+    <tr>
+        <td>&lt;section&gt;</td>
+        <td>Definieert een thematische sectie van de inhoud</td>
+    </tr>
+    <tr>
+        <td>&lt;article&gt;</td>
+        <td>Zelfstandig stuk content zoals een nieuwsartikel of blogpost</td>
+    </tr>
+    <tr>
+        <td>&lt;aside&gt;</td>
+        <td>Zijdelingse inhoud, bv. een sidebar</td>
+    </tr>
+    <tr>
+        <td>&lt;footer&gt;</td>
+        <td>Definieert een voettekst voor een document of sectie</td>
+    </tr>
+    <tr>
+        <td>&lt;figure&gt;</td>
+        <td>Container voor media zoals afbeeldingen of diagrammen</td>
+    </tr>
+    <tr>
+        <td>&lt;figcaption&gt;</td>
+        <td>Onderschrift bij een &lt;figure&gt;</td>
+    </tr>
+    <tr>
+        <td>&lt;mark&gt;</td>
+        <td>Markeert of highlight tekst</td>
+    </tr>
+    <tr>
+        <td>&lt;time&gt;</td>
+        <td>Geeft een datum of tijd aan</td>
+    </tr>
+    <tr>
+        <td>&lt;details&gt;</td>
+        <td>Interactief element dat extra info kan tonen/verbergen</td>
+    </tr>
+    <tr>
+        <td>&lt;summary&gt;</td>
+        <td>Kopregel voor een &lt;details&gt; element</td>
+    </tr>
+    </tbody>
+</table>
+
+
+<hr size="5" color="black">
+
+<b>
+    <p style="font-size: 50px;">Tabellen</p>
+</b>
+
+<!-- Normale tabel -->
+<h2>1. Normale tabel</h2>
+<div class="voorbeeld">
+    <div class="code">
+        <h3>HTML Code:</h3>
+        <pre><code>
+&lt;table border="1"&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Naam&lt;/th&gt;
+    &lt;th&gt;Leeftijd&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Sander&lt;/td&gt;
+    &lt;td&gt;20&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Emma&lt;/td&gt;
+    &lt;td&gt;22&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+        </code></pre>
+    </div>
+    <div class="output">
+        <h3>Output:</h3>
+        <table border="1">
+            <tr>
+                <th>Naam</th>
+                <th>Leeftijd</th>
+            </tr>
+            <tr>
+                <td>Sander</td>
+                <td>20</td>
+            </tr>
+            <tr>
+                <td>Emma</td>
+                <td>22</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- Tabel met rowspan -->
+<h2>2. Tabel met rowspan</h2>
+<div class="voorbeeld">
+    <div class="code">
+        <h3>HTML Code:</h3>
+        <pre><code>
+&lt;table border="1"&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Vak&lt;/th&gt;
+    &lt;th&gt;Student&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td rowspan="2"&gt;Webontwikkeling&lt;/td&gt;
+    &lt;td&gt;Sander&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Emma&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+        </code></pre>
+    </div>
+    <div class="output">
+        <h3>Output:</h3>
+        <table border="1">
+            <tr>
+                <th>Vak</th>
+                <th>Student</th>
+            </tr>
+            <tr>
+                <td rowspan="2">Webontwikkeling</td>
+                <td>Sander</td>
+            </tr>
+            <tr>
+                <td>Emma</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- Tabel met colspan -->
+<h2>3. Tabel met colspan</h2>
+<div class="voorbeeld">
+    <div class="code">
+        <h3>HTML Code:</h3>
+        <pre><code>
+&lt;table border="1"&gt;
+  &lt;tr&gt;
+    &lt;th colspan="2"&gt;Resultaten&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Sander&lt;/td&gt;
+    &lt;td&gt;Geslaagd&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Emma&lt;/td&gt;
+    &lt;td&gt;Geslaagd&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+        </code></pre>
+    </div>
+    <div class="output">
+        <h3>Output:</h3>
+        <table border="1">
+            <tr>
+                <th colspan="2">Resultaten</th>
+            </tr>
+            <tr>
+                <td>persoon1</td>
+                <td>Geslaagd</td>
+            </tr>
+            <tr>
+                <td>persoon2</td>
+                <td>Geslaagd</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+
+
+<hr size="5" color="black">
+
+<b>
+    <p style="font-size: 50px;">Hyperlinks</p>
+</b>
+
+<div class="voorbeeld">
+    <!-- Links: de code -->
+    <div class="code">
+        <h3>HTML Code:</h3>
+        <pre><code>
+&lt;p&gt;Een hyperlink naar
+    &lt;a href="https://www.example.com" target="_blank"&gt;
+        Example.com
+    &lt;/a&gt;
+    die in een nieuw tabblad opent.&lt;/p&gt;
+        </code></pre>
+    </div>
+
+    <!-- Rechts: de output -->
+    <div class="output">
+        <h3>Output:</h3>
+        <p>Een hyperlink naar
+            <a href="https://www.example.com" target="_blank">Example.com</a>
+            die in een nieuw tabblad opent.
+        </p>
+    </div>
+</div>
+
+
+
+
+
+<hr size="5" color="black">
+
+<b>
+    <p style="font-size: 50px;">Afbeeldingen</p>
+</b>
+
+<div class="voorbeeld">
+    <!-- Links: de code -->
+    <div class="code">
+        <h3>HTML Code:</h3>
+        <pre><code>
+&lt;p&gt;
+    &lt;img
+        src="logo_vives.png"
+        alt="Een grote figuur"
+        width="400"
+        height="160"&gt;
+&lt;/p&gt;
+        </code></pre>
+    </div>
+
+    <!-- Rechts: de output -->
+    <div class="output">
+        <h3>Output:</h3>
+        <p>
+            <img src="logo_vives.png" alt="Een grote figuur" width="400"
+                 height="160">
+        </p>
+    </div>
+</div>
+
+
+
+
+
+<hr size="5" color="black">
+
+<b>
+    <p style="font-size: 50px;">HTML valideren</p>
+</b>
+
+<p>Om te controleren of je HTML-code geldig is, kun je de W3C Markup Validation Service gebruiken. Deze tool
+    analyseert je HTML-code en geeft aan of er fouten of waarschuwingen zijn die je moet corrigeren om te voldoen
+    aan de webstandaarden.</p>
+<p><a href="https://validator.w3.org/">Link naar de validator (voor zowel HTML als CSS)</a></p>
+
+
+
+
+
+
+<hr size="5" color="black">
+
+<b>
+    <p style="font-size: 50px;">Formulieren</p>
+</b>
+
+<p>
+    Het <b>&lt;form&gt;</b>-element in HTML wordt gebruikt om invoer van gebruikers te verzamelen.
+    Binnen een formulier kun je verschillende velden plaatsen, zoals tekstvakken, keuzerondjes,
+    selectielijsten, checkboxes en knoppen. Wanneer de gebruiker het formulier verzendt,
+    worden de ingevulde gegevens doorgestuurd naar een server of verwerkt door een script.
+    Zo vormt <b>&lt;form&gt;</b> de basis voor interactie tussen een website en zijn bezoekers.
+</p>
+
+
+<div class="voorbeeld">
+    <div class="code">
+        <h3>HTML Code:</h3>
+        <pre><code>
+&lt;form action="verwerk.php" method="post"&gt;
+  Naam: &lt;input type="text" name="naam" required&gt;&lt;br&gt;&lt;br&gt;
+  E-mail: &lt;input type="email" name="email"&gt;&lt;br&gt;&lt;br&gt;
+  Geslacht:
+    &lt;input type="radio" name="geslacht" value="man"&gt; Man
+    &lt;input type="radio" name="geslacht" value="vrouw"&gt; Vrouw&lt;br&gt;&lt;br&gt;
+  Interesses:
+    &lt;input type="checkbox" name="sport"&gt; Sport
+    &lt;input type="checkbox" name="muziek"&gt; Muziek&lt;br&gt;&lt;br&gt;
+  &lt;input type="submit" value="Verstuur"&gt;
+&lt;/form&gt;
+    </code></pre>
+    </div>
+
+    <div class="output">
+        <h3>Output:</h3>
+        <form action="verwerk.php" method="post">
+            Naam: <input type="text" name="naam" required><br><br>
+            E-mail: <input type="email" name="email"><br><br>
+            Geslacht:
+            <input type="radio" name="geslacht" value="man"> Man
+            <input type="radio" name="geslacht" value="vrouw"> Vrouw<br><br>
+            Interesses:
+            <input type="checkbox" name="sport"> Sport
+            <input type="checkbox" name="muziek"> Muziek<br><br>
+            <input type="submit" value="Verstuur">
+        </form>
+    </div>
+</div>
+
+
+
+
+
+<hr size="5" color="black">
+
+<b>
+    <p style="font-size: 50px;">Formulierobjecten</p>
+</b>
+
+<h2>1. Tekstveld (<b>&lt;input type="text"&gt;</b>)</h2>
+<div class="voorbeeld">
+    <!-- Links: de code -->
+    <div class="code">
+        <h3>HTML Code:</h3>
+        <pre><code>
+&lt;form&gt;
+  &lt;label for="naam"&gt;Naam:&lt;/label&gt;
+    &lt;input type="text" id="naam" name="naam"&gt;
+&lt;/form&gt;
+        </code></pre>
+    </div>
+    <!-- Rechts: de output -->
+    <div class="output">
+        <h3>Output:</h3>
+        <form>
+            <label for="naam">Naam:</label>
+            <input type="text" id="naam" name="naam">
+        </form>
+    </div>
+</div>
+
+
+<h2>2. Paswoordvelden (<b>&lt;input type="password"&gt;</b>)</h2>
+<div class="voorbeeld">
+    <!-- Links: de code -->
+    <div class="code">
+        <h3>HTML Code:</h3>
+        <pre><code>
+&lt;form&gt;
+  &lt;label for="wachtwoord"&gt;Wachtwoord:&lt;/label&gt;
+    &lt;input type="password" id="wachtwoord" name="wachtwoord"&gt;
+&lt;/form&gt;
+        </code></pre>
+    </div>
+    <!-- Rechts: de output -->
+    <div class="output">
+        <h3>Output:</h3>
+        <form>
+            <label for="wachtwoord">Wachtwoord:</label>
+            <input type="password" id="wachtwoord" name="wachtwoord">
+        </form>
+    </div>
+</div>
+
+
+
+
+
+<h2>3. Email Address & Web Address (<b>&lt;input type="email"&gt;</b> en <b>&lt;input type="url"&gt;</b>)</h2>
+<div class="voorbeeld">
+    <!-- Links: de code -->
+    <div class="code">
+        <h3>HTML Code:</h3>
+        <pre><code>
+&lt;form&gt;
+  &lt;label for="email"&gt;E-mail:&lt;/label&gt;
+    &lt;input type="email" id="email" name="email"&gt;&lt;br&gt;&lt;br&gt;
+  &lt;label for="website"&gt;Website:&lt;/label&gt;
+    &lt;input type="url" id="website" name="website"&gt;
+&lt;/form&gt;
+        </code></pre>
+    </div>
+    <!-- Rechts: de output -->
+    <div class="output">
+        <h3>Output:</h3>
+        <form>
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email"><br><br>
+            <label for="website">Website:</label>
+            <input type="url" id="website" name="website">
+        </form>
+    </div>
+</div>
+
+
+
+
+<h2>4. number (<b>&lt;input type="number"&gt;</b>)</h2>
+<div class="voorbeeld">
+    <!-- Links: de code -->
+    <div class="code">
+        <h3>HTML Code:</h3>
+        <pre><code>
+&lt;form&gt;
+  &lt;label for="leeftijd"&gt;Leeftijd:&lt;/label&gt;
+    &lt;input type="number" id="leeftijd" name="leeftijd"&gt;
+&lt;/form&gt;
+        </code></pre>
+    </div>
+    <!-- Rechts: de output -->
+    <div class="output">
+        <h3>Output:</h3>
+        <form>
+            <label for="leeftijd">Leeftijd:</label>
+            <input type="number" id="leeftijd" name="leeftijd">
+        </form>
+    </div>
+</div>
+
+
+
+<h2>4.1. Data en tijden invoeren (<b>&lt;input type="date"&gt;</b>)</h2>
+<div class="voorbeeld">
+    <!-- Links: de code -->
+    <div class="code">
+        <h3>HTML Code:</h3>
+        <pre><code>
+&lt;form&gt;
+  &lt;label for="geboortedatum"&gt;Geboortedatum:&lt;/label&gt;
+    &lt;input type="date" id="geboortedatum" name="geboortedatum"&gt;
+&lt;/form&gt;
+        </code></pre>
+    </div>
+    <!-- Rechts: de output -->
+    <div class="output">
+        <h3>Output:</h3>
+        <form>
+            <label for="geboortedatum">Geboortedatum:</label>
+            <input type="date" id="geboortedatum" name="geboortedatum">
+        </form>
+    </div>
+</div>
+
+<h2>4.2. Data en tijden invoeren (<b>&lt;input type="month"&gt;</b>)</h2>
+<div class="voorbeeld">
+    <!-- Links: de code -->
+    <div class="code">
+        <h3>HTML Code:</h3>
+        <pre><code>
+&lt;form&gt;
+  &lt;label for="geboortemaand"&gt;Geboortemaand:&lt;/label&gt;
+    &lt;input type="month" id="geboortemaand" name="geboortemaand"&gt;
+&lt;/form&gt;
+        </code></pre>
+    </div>
+    <!-- Rechts: de output -->
+    <div class="output">
+        <h3>Output:</h3>
+        <form>
+            <label for="geboortemaand">Geboortemaand:</label>
+            <input type="month" id="geboortemaand" name="geboortemaand">
+        </form>
+    </div>
+</div>
+
+
+<h2>4.3. Data en tijden invoeren (<b>&lt;input type="week"&gt;</b>)</h2>
+<div class="voorbeeld">
+    <!-- Links: de code -->
+    <div class="code">
+        <h3>HTML Code:</h3>
+        <pre><code>
+&lt;form&gt;
+  &lt;label for="geboorteweek"&gt;Geboorteweek:&lt;/label&gt;
+    &lt;input type="week" id="geboorteweek" name="geboorteweek"&gt;
+&lt;/form&gt;
+        </code></pre>
+    </div>
+    <!-- Rechts: de output -->
+    <div class="output">
+        <h3>Output:</h3>
+        <form>
+            <label for="geboorteweek">Geboorteweek:</label>
+            <input type="week" id="geboorteweek" name="geboorteweek">
+        </form>
+    </div>
+</div>
+
+
+
+
+<h2>4.4. Data en tijden invoeren (<b>&lt;input type="time"&gt;</b>)</h2>
+<div class="voorbeeld">
+    <!-- Links: de code -->
+    <div class="code">
+        <h3>HTML Code:</h3>
+        <pre><code>
+&lt;form&gt;
+  &lt;label for="geboortetijd"&gt;Geboortetijd:&lt;/label&gt;
+    &lt;input type="time" id="geboortetijd" name="geboortetijd"&gt;
+&lt;/form&gt;
+        </code></pre>
+    </div>
+    <!-- Rechts: de output -->
+    <div class="output">
+        <h3>Output:</h3>
+        <form>
+            <label for="geboortetijd">Geboortetijd:</label>
+            <input type="time" id="geboortetijd" name="geboortetijd">
+        </form>
+    </div>
+</div>
+
+
+
+
+<h2>5. Searchbox (<b>&lt;input type="search"&gt;</b>)</h2>
+<div class="voorbeeld">
+    <!-- Links: de code -->
+    <div class="code">
+        <h3>HTML Code:</h3>
+        <pre><code>
+&lt;form&gt;
+  &lt;label for="zoekterm"&gt;Zoekterm:&lt;/label&gt;
+    &lt;input type="search" id="zoekterm" name="zoekterm"&gt;
+&lt;/form&gt;
+        </code></pre>
+    </div>
+    <!-- Rechts: de output -->
+    <div class="output">
+        <h3>Output:</h3>
+        <form>
+            <label for="zoekterm">Zoekterm:</label>
+            <input type="search" id="zoekterm" name="zoekterm">
+        </form>
+    </div>
+</div>
+
+
+<h2>6. tekstvak met meerdere regels (<b>&lt;input type="textarea"&gt;</b>)</h2>
+<div class="voorbeeld">
+    <!-- Links: de code -->
+    <div class="code">
+        <h3>HTML Code:</h3>
+        <pre><code>
+&lt;form&gt;
+  &lt;label for="bericht"&gt;Bericht:&lt;/label&gt;
+    &lt;textarea id="bericht" name="bericht"&gt;&lt;/textarea&gt;
+&lt;/form&gt;
+        </code></pre>
+    </div>
+    <!-- Rechts: de output -->
+    <div class="output">
+        <h3>Output:</h3>
+        <form>
+            <label for="bericht">Bericht:</label>
+            <textarea id="bericht" name="bericht"></textarea>
+        </form>
+    </div>
+</div>
+
+
+<h2>7. checkbox (<b>&lt;input type="checkbox"&gt;</b>)</h2>
+<div class="voorbeeld">
+    <!-- Links: de code -->
+    <div class="code">
+        <h3>HTML Code:</h3>
+        <pre><code>
+&lt;form&gt;
+  &lt;label for="voorkeur"&gt;Voorkeur:&lt;/label&gt;
+    &lt;input type="checkbox" id="voorkeur" name="voorkeur"&gt;
+&lt;/form&gt;
+        </code></pre>
+    </div>
+    <!-- Rechts: de output -->
+    <div class="output">
+        <h3>Output:</h3>
+        <form>
+            <label for="voorkeur">Voorkeur:</label>
+            <input type="checkbox" id="voorkeur" name="voorkeur">
+        </form>
+    </div>
+</div>
+
+
+
+<h2>8. radiobutton (<b>&lt;input type="radio"&gt;</b>)</h2>
+<div class="voorbeeld">
+    <!-- Links: de code -->
+    <div class="code">
+        <h3>HTML Code:</h3>
+        <pre><code>
+&lt;form&gt;
+  &lt;label for="geslacht"&gt;Geslacht:&lt;/label&gt;
+    &lt;input type="radio" id="man" name="geslacht" value="man"&gt;
+    &lt;label for="man"&gt;Man&lt;/label&gt;
+    &lt;input type="radio" id="vrouw" name="geslacht" value="vrouw"&gt;
+    &lt;label for="vrouw"&gt;Vrouw&lt;/label&gt;
+&lt;/form&gt;
+        </code></pre>
+    </div>
+    <!-- Rechts: de output -->
+    <div class="output">
+        <h3>Output:</h3>
+        <form>
+            <label for="geslacht">Geslacht:</label>
+            <input type="radio" id="man" name="geslacht" value="man">
+            <label for="man">Man</label>
+            <input type="radio" id="vrouw" name="geslacht" value="vrouw">
+            <label for="vrouw">Vrouw</label>
+        </form>
+    </div>
+</div>
+
+
+
+
+
+<h2>9. Keuzelijst (<b>&lt;select&gt;</b>)</h2>
+
+<div class="voorbeeld">
+    <!-- Links: de code -->
+    <div class="code">
+        <h3>HTML Code:</h3>
+        <pre><code>
+&lt;select name="data-id" size="2" multiple="multiple"&gt;
+    &lt;option value="waarde1" selected="selected"&gt;keuze1&lt;/option&gt;
+    &lt;option value="waarde2"&gt;keuze2&lt;/option&gt;
+&lt;/select&gt;
+        </code></pre>
+    </div>
+
+    <!-- Rechts: de output -->
+    <div class="output">
+        <h3>Output:</h3>
+        <select name="data-id" size="2" multiple="multiple">
+            <option value="waarde1" selected="selected">keuze1</option>
+            <option value="waarde2">keuze2</option>
+        </select>
+    </div>
+</div>
+
+
+
+<h2>9. verborgen veld (<b>&lt;input type="hidden"&gt;</b>)</h2>
+<div class="voorbeeld">
+    <!-- Links: de code -->
+    <div class="code">
+        <h3>HTML Code:</h3>
+        <pre><code>
+&lt;form&gt;
+  &lt;input type="hidden" name="id" value="123"&gt;
+&lt;/form&gt;
+                </code></pre>
+    </div>
+    <!-- Rechts: de output -->
+    <div class="output">
+        <h3>Output:</h3>
+        <form>
+            <input type="hidden" name="id" value="123">
+        </form>
+    </div>
+</div>
+
+
+
+
+<hr size="5" color="black">
+
+<b>
+    <p style="font-size: 50px;">attributen voor &lt;input&gt; element</p>
+</b>
+
+
+<h2>1. Autofocus (<b>&lt;input type="text"&gt;</b>)</h2>
+
+<h4>
+    Autofocus is een attribuut dat ervoor zorgt dat het invoerveld automatisch wordt geselecteerd wanneer de pagina wordt geladen.
+    <br>
+    <span style="color: red; font-size: 30px; font-weight: bold;">
+        Dit is dan ook de reden waarom je hier altijd komt wanneer de pagina opent of herladen wordt.
+    </span>
+</h4>
+
+<div class="voorbeeld">
+    <!-- Links: de code -->
+    <div class="code">
+        <h3>HTML Code:</h3>
+        <pre><code>
+&lt;form&gt;
+    Naam: &lt;input type="text" name="naam" autofocus&gt;
+&lt;/form&gt;
+        </code></pre>
+    </div>
+
+    <!-- Rechts: de output -->
+    <div class="output">
+        <h3>Output:</h3>
+        <form>
+            Naam: <input type="text" name="naam" autofocus>
+        </form>
+    </div>
+</div>
+
+
+<h2>2. required (<b>&lt;input type="text"&gt;</b>)</h2>
+
+<div class="voorbeeld">
+    <!-- Links: de code -->
+    <div class="code">
+        <h3>HTML Code:</h3>
+        <pre><code>
+&lt;form&gt;
+    Naam: &lt;input type="text" name="naam" required&gt;
+    &lt;input type="submit" value="Verstuur"&gt;
+&lt;/form&gt;
+        </code></pre>
+    </div>
+
+    <!-- Rechts: de output -->
+    <div class="output">
+        <h3>Output:</h3>
+        <form>
+            Naam: <input type="text" name="naam" required>
+            <input type="submit" value="Verstuur">
+        </form>
+    </div>
+</div>
+
+
+
+<h2>3. placeholder (<b>&lt;input type="text"&gt;</b>)</h2>
+<div class="voorbeeld">
+    <!-- Links: de code -->
+    <div class="code">
+        <h3>HTML Code:</h3>
+        <pre><code>
+&lt;form&gt;
+    Naam: &lt;input type="text" name="naam" placeholder="Vul hier je naam in"&gt;
+    &lt;input type="submit" value="Verstuur"&gt;
+&lt;/form&gt;
+        </code></pre>
+    </div>
+
+    <!-- Rechts: de output -->
+    <div class="output">
+        <h3>Output:</h3>
+        <form>
+            Naam: <input type="text" name="naam" placeholder="Vul hier je naam in">
+            <input type="submit" value="Verstuur">
+        </form>
+    </div>
+</div>
+
+
+<h2>4. list (<b>&lt;input type="text"&gt;</b>)</h2>
+<div class="voorbeeld">
+    <!-- Links: de code -->
+    <div class="code">
+        <h3>HTML Code:</h3>
+        <pre><code>
+&lt;form&gt;
+    &lt;input type="text" name="naam" list="namen"&gt;
+    &lt;datalist id="namen"&gt;
+        &lt;option value="Jan"&gt;&lt;/option&gt;
+        &lt;option value="Piet"&gt;&lt;/option&gt;
+        &lt;option value="Karel"&gt;&lt;/option&gt;
+    &lt;/datalist&gt;
+    &lt;input type="submit" value="Verstuur"&gt;
+&lt;/form&gt;
+        </code></pre>
+    </div>
+
+    <!-- Rechts: de output -->
+    <div class="output">
+        <h3>Output:</h3>
+        <form>
+            <input type="text" name="naam" list="namen">
+            <datalist id="namen">
+                <option value="Jan"></option>
+                <option value="Piet"></option>
+                <option value="Karel"></option>
+            </datalist>
+            <input type="submit" value="Verstuur">
+        </form>
+    </div>
+</div>
+
+
+<h2>5. Multiple (<b>&lt;input type="text"&gt;</b>)</h2>
+
+
+<p>Met dit attribuut wordt aangegeven dat het mogelijk is om meerdere waarden in één invoerveld in te
+    voeren. Dit is bijvoorbeeld handig bij het file input type, waarmee er bestanden op de computer
+    kunnen geselecteerd worden.</p>
+
+
+<div class="voorbeeld">
+    <!-- Links: de code -->
+    <div class="code">
+        <h3>HTML Code:</h3>
+        <pre><code>
+&lt;form&gt;
+    E-mail: &lt;input type="email" name="email" multiple&gt;
+    &lt;input type="submit" value="Verstuur"&gt;
+&lt;/form&gt;
+        </code></pre>
+    </div>
+
+    <!-- Rechts: de output -->
+    <div class="output">
+        <h3>Output:</h3>
+        <form>
+            E-mail: <input type="email" name="email" multiple>
+            <input type="submit" value="Verstuur">
+        </form>
+    </div>
+</div>
+
+
+<h2>6. pattern (<b>&lt;input type="text"&gt;</b>)</h2>
+<div class="voorbeeld">
+    <!-- Links: de code -->
+    <div class="code">
+        <h3>HTML Code:</h3>
+        <pre><code>
+&lt;form&gt;
+    Telefoonnummer: &lt;input type="tel" name="telefoon" pattern="[0-9]{3}-[0-9]{2}-[0-9]{2}"&gt;
+    &lt;input type="submit" value="Verstuur"&gt;
+&lt;/form&gt;
+        </code></pre>
+    </div>
+
+    <!-- Rechts: de output -->
+    <div class="output">
+        <h3>Output:</h3>
+        <form>
+            Telefoonnummer: <input type="tel" name="telefoon" pattern="[0-9]{3}-[0-9]{2}-[0-9]{2}">
+            <input type="submit" value="Verstuur">
+        </form>
+    </div>
+</div>
+
+
+
+<hr size="5" color="black">
+
+<b>
+    <p style="font-size: 50px;">Video</p>
+</b>
+
+<div class="voorbeeld">
+    <!-- Links: de code -->
+    <div class="code">
+        <h3>HTML Code:</h3>
+        <pre><code>
+&lt;video width="320" height="240" controls&gt;
+  &lt;source src="movie.mp4" type="video/mp4"&gt;
+    &lt;source src="movie.ogg" type="video/ogg"&gt;
+      Your browser does not support the video tag.
+&lt;/video&gt;
+        </code></pre>
+    </div>
+
+    <!-- Rechts: de output -->
+    <div class="output">
+        <h3>Output:</h3>
+        <video width="320" height="240" controls>
+            <source src="movie.mp4" type="video/mp4">
+            <source src="movie.ogg" type="video/ogg">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+</div>
+
+
+
+
+<hr size="5" color="black">
+
+<b>
+    <p style="font-size: 50px;">audio</p>
+</b>
+
+<div class="voorbeeld">
+    <!-- Links: de code -->
+    <div class="code">
+        <h3>HTML Code:</h3>
+        <pre><code>
+&lt;audio controls&gt;
+  &lt;source src="audiofile.mp3" type="audio/mpeg"&gt
+    &lt;source src="audiofile.ogg" type="audio/ogg"&gt;
+      Your browser does not support the audio element.
+&lt;/audio&gt;
+        </code></pre>
+    </div>
+
+    <!-- Rechts: de output -->
+    <div class="output">
+        <h3>Output:</h3>
+        <audio controls>
+            <source src="audiofile.mp3" type="audio/mpeg">
+            <source src="audiofile.ogg" type="audio/ogg">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+</div>
+
+
+<hr size="5" color="black">
+
+<b>
+    <p style="font-size: 50px;">canvas</p>
+</b>
+
+<p>
+    Het <b>&lt;canvas&gt;</b>-element in HTML5 is een rechthoekig vlak waarop je met
+    JavaScript kunt tekenen. Je kunt er vormen, lijnen, tekst, afbeeldingen en zelfs
+    animaties of complete games mee maken. In tegenstelling tot gewone HTML‑elementen
+    heeft <b>&lt;canvas&gt;</b> zelf geen inhoud; alles wat zichtbaar wordt, moet via
+    JavaScript getekend worden. Het wordt vandaag nog steeds veel gebruikt, vooral in
+    interactieve webapplicaties, visualisaties en grafische toepassingen zoals
+    dashboards, grafieken en online spelletjes.
+</p>
+
+
+
+
+<h2>leeg canvas</h2>
+
+<div class="voorbeeld">
+    <!-- Links: de code -->
+    <div class="code">
+        <h3>HTML Code:</h3>
+        <pre><code>
+&lt;canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;"&gt;
+Your browser does not support the HTML5 canvas tag.
+&lt;/canvas&gt;
+        </code></pre>
+    </div>
+
+    <!-- Rechts: de output -->
+    <div class="output">
+        <h3>Output:</h3>
+        <canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;">
+            Your browser does not support the HTML5 canvas tag.
+        </canvas>
+    </div>
+</div>
+
+
+
+<h2>2. Canvas met tekening</h2>
+
+<div class="voorbeeld">
+    <!-- Links: de code -->
+    <div class="code">
+        <h3>HTML Code:</h3>
+        <pre><code>
+&lt;canvas id="canvasDemo" width="300" height="150" style="border:1px solid #000000;"&gt;
+Your browser does not support the HTML5 canvas tag.
+&lt;/canvas&gt;
+
+&lt;script&gt;
+    // Haal het canvas-element op
+    var c = document.getElementById("canvasDemo");
+    var ctx = c.getContext("2d");
+
+    // Rode rechthoek
+    ctx.fillStyle = "red";
+    ctx.fillRect(20, 20, 100, 50);
+
+    // Blauwe cirkel
+    ctx.beginPath();
+    ctx.arc(200, 75, 40, 0, 2 * Math.PI);
+    ctx.fillStyle = "blue";
+    ctx.fill();
+&lt;/script&gt;
+        </code></pre>
+    </div>
+
+    <!-- Rechts: de output -->
+    <div class="output">
+        <h3>Output:</h3>
+        <canvas id="canvasDemo" width="300" height="150" style="border:1px solid #000000;">
+            Your browser does not support the HTML5 canvas tag.
+        </canvas>
+
+        <script>
+            var c = document.getElementById("canvasDemo");
+            var ctx = c.getContext("2d");
+
+            // Rode rechthoek
+            ctx.fillStyle = "red";
+            ctx.fillRect(20, 20, 100, 50);
+
+            // Blauwe cirkel
+            ctx.beginPath();
+            ctx.arc(200, 75, 40, 0, 2 * Math.PI);
+            ctx.fillStyle = "blue";
+            ctx.fill();
+        </script>
+    </div>
+</div>
+
+
+</body>
+
+</html>
