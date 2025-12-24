@@ -1,8 +1,8 @@
 <!doctype html>
 <html lang="nl">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
     <meta name="color-scheme" content="light">
     <meta name="supported-color-schemes" content="light">
@@ -13,30 +13,34 @@
             color-scheme: light;
         }
 
-
-        body{
-            background: linear-gradient(135deg,#ffe5ec,#ffd6e6,#fff0f5) !important;
-            margin:0; padding:0; font-family:'Georgia',serif;
-            background-repeat:no-repeat;
-            background-attachment:fixed;
-            background-size:cover;
-            color:#4b2b36; text-align:center !important;
-            overflow-x:hidden;
-        }
-
         html {
-            background-color: #ffe5ec !important;
+            background-color: #ffe5ec;
+            color-scheme: light;
         }
 
-        #start, .card{
-            background-color: #ffffff !important;
-            color: #4b2b36 !important;
-            padding:40px;
-            border-radius:28px;
-            box-shadow:0 12px 40px rgba(0,0,0,0.12);
-            width:90%;
-            max-width:760px;
-            margin:80px auto;
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Georgia', serif;
+            background: linear-gradient(135deg,#ffe5ec,#ffd6e6,#fff0f5);
+            color: #4b2b36;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            text-align: center;
+            overflow-x: hidden;
+        }
+
+        #start, .card {
+            background-color: #ffffff;
+            color: #4b2b36;
+            padding: 40px;
+            border-radius: 28px;
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+            width: 90%;
+            max-width: 760px;
+            margin: 80px auto;
         }
 
         .heart,
@@ -45,25 +49,47 @@
             will-change: transform;
         }
 
-        .heart{
-            color:#FF6B8AFF;
-            display: inline-block;
-            line-height: 1;
-            transform-origin: center center;
-            will-change: transform;
-            -webkit-text-size-adjust: 100%;
-            text-size-adjust: 100%;
+        .heart {
+            color: #FF6B8AFF;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            animation: pulse 2.2s infinite;
         }
 
-        #start button{
-            background:#ff6b8a; border:0; padding:14px 26px; border-radius:14px;
-            color:white; font-size:20px; cursor:pointer; margin-top:20px;
-            box-shadow:0 6px 20px rgba(255,107,138,0.3);
-            transition:transform .2s;
+        .heart-svg {
+            width: 80px;
+            height: auto;
+            fill: #ff4d6d;
+            filter: drop-shadow(0 0 6px rgba(255, 107, 138, 0.6)) drop-shadow(0 0 14px rgba(255, 133, 160, 0.35));
+        }
+
+
+        .heart.big .heart-svg {
+            width: 120px;
+        }
+
+        button {
+            color: #ffffff;
+        }
+
+
+        #start button {
+            background: #ff6b8a;
+            border: 0;
+            padding: 14px 26px;
+            border-radius: 14px;
+            color: white;
+            font-size: 20px;
+            cursor: pointer;
+            margin-top: 20px;
+            box-shadow: 0 6px 20px rgba(255, 107, 138, 0.3);
+            transition: transform .2s;
             background: linear-gradient(135deg, #ff6b8a, #ff85a0);
             position: relative;
             overflow: hidden;
         }
+
         #start button::after {
             content: "";
             position: absolute;
@@ -71,70 +97,130 @@
             left: -50%;
             width: 200%;
             height: 200%;
-            background: radial-gradient(circle, rgba(255,255,255,0.4) 0%, transparent 70%);
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.4) 0%, transparent 70%);
             animation: shine 3s infinite;
         }
+
         @keyframes shine {
-            0% { transform: translateX(-100%) translateY(-100%); }
-            100% { transform: translateX(100%) translateY(100%); }
+            0% {
+                transform: translateX(-100%) translateY(-100%);
+            }
+            100% {
+                transform: translateX(100%) translateY(100%);
+            }
         }
 
-        #start button:hover{ transform:scale(1.07); }
+        #start button:hover {
+            transform: scale(1.07);
+        }
 
         .card {
             display: none;
             animation: fadeIn 1.5s ease forwards;
         }
 
-        h1{font-size:42px; margin-bottom:14px;}
-        p{font-size:22px; line-height:1.7; margin-bottom:20px;opacity: 0; animation: fadeIn 1.2s ease forwards;
+        h1 {
+            font-size: 42px;
+            margin-bottom: 14px;
         }
-        p:nth-of-type(1) { animation-delay: 0.5s; }
-        p:nth-of-type(2) { animation-delay: 1s; }
-        p:nth-of-type(3) { animation-delay: 1.5s; }
-        p:nth-of-type(4) { animation-delay: 2s; }
 
-        .heart{font-size:60px; margin:20px 0; animation:pulse 2.2s infinite;}
+        p {
+            font-size: 22px;
+            line-height: 1.7;
+            margin-bottom: 20px;
+            opacity: 0;
+            animation: fadeIn 1.2s ease forwards;
+        }
+
+        p:nth-of-type(1) {
+            animation-delay: 0.5s;
+        }
+
+        p:nth-of-type(2) {
+            animation-delay: 1s;
+        }
+
+        p:nth-of-type(3) {
+            animation-delay: 1.5s;
+        }
+
+        p:nth-of-type(4) {
+            animation-delay: 2s;
+        }
+
+        .heart {
+            font-size: 60px;
+            margin: 20px 0;
+            animation: pulse 2.2s infinite;
+        }
 
         @keyframes pulse {
             0% {
-                transform: translateZ(0) scale(1);
+                transform: scale(1);
             }
             50% {
-                transform: translateZ(0) scale(1.15);
+                transform: scale(1.18);
             }
             100% {
-                transform: translateZ(0) scale(1);
+                transform: scale(1);
             }
         }
 
-        @keyframes fadeIn{from{opacity:0; transform:translateY(20px);}to{opacity:1;} }
-
-        .floating-heart{
-            position:fixed;
-            bottom:-50px;
-            font-size:24px;
-            opacity:0.9;
-            animation:floatUp linear forwards;
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+            }
         }
 
-        @keyframes floatUp{
-            from{transform:translateY(0) translateX(0); opacity:1;}
-            to{transform: translate3d(var(--x-move), -160svh, 0); opacity:0.4;}
+        .floating-heart {
+            position: fixed;
+            bottom: -50px;
+            font-size: 24px;
+            opacity: 0.9;
+            animation: floatUp linear forwards;
+        }
+
+        @keyframes floatUp {
+            from {
+                transform: translateY(0) translateX(0);
+                opacity: 1;
+            }
+            to {
+                transform: translateY(-160vh) translateX(var(--x-move));
+                opacity: 0.4;
+            }
         }
 
 
-        .signature{margin-top:32px; font-size:24px; font-style:italic;}
-
-        @media(max-width:600px){
-            #start, .card{ padding:26px; margin:40px auto; }
-            h1{ font-size:30px; }
-            p{ font-size:18px; line-height:1.55; }
-            .heart{ font-size:46px; }
+        .signature {
+            margin-top: 32px;
+            font-size: 24px;
+            font-style: italic;
         }
 
+        @media (max-width: 600px) {
+            #start, .card {
+                padding: 26px;
+                margin: 40px auto;
+            }
 
+            h1 {
+                font-size: 30px;
+            }
 
+            p {
+                font-size: 18px;
+                line-height: 1.55;
+            }
+
+            .heart {
+                font-size: 46px;
+            }
+        }
 
 
     </style>
@@ -148,7 +234,23 @@
 </div>
 
 <div class="card" id="card">
-    <div class="heart">❤</div>
+    <div class="heart">
+        <div class="heart big" style="margin:30px 0;">
+
+            <svg class="heart-svg" viewBox="0 0 100 90" aria-hidden="true">
+                <path d="
+      M50 82
+      C20 60, 0 42, 0 25
+      C0 10, 12 0, 25 0
+      C35 0, 45 6, 50 14
+      C55 6, 65 0, 75 0
+      C88 0, 100 10, 100 25
+      C100 42, 80 60, 50 82
+      Z"/>
+            </svg>
+        </div>
+    </div>
+
     <h1>Voor jou, mijn allerliefste</h1>
 
     <p>
@@ -165,11 +267,24 @@
 
     <p>
         Bij jou voel ik me echt op mijn gemak. Bij jou kan ik gewoon mezelf zijn, zonder nadenken of twijfelen.
-        Ook op moeilijkere momenten zijn we er voor elkaar, en dat betekent meer voor mij dan ik soms in woorden kan uitleggen.
+        Ook op moeilijkere momenten zijn we er voor elkaar, en dat betekent meer voor mij dan ik soms in woorden kan
+        uitleggen.
     </p>
 
     <div style="margin:30px 0;">
-        <div class="heart" style="font-size:100px; color:#ed4f6d;">❤</div>
+        <div class="heart">
+            <svg class="heart-svg" viewBox="0 0 100 90" aria-hidden="true">
+                <path d="
+      M50 82
+      C20 60, 0 42, 0 25
+      C0 10, 12 0, 25 0
+      C35 0, 45 6, 50 14
+      C55 6, 65 0, 75 0
+      C88 0, 100 10, 100 25
+      C100 42, 80 60, 50 82
+      Z"/>
+            </svg>
+        </div>
     </div>
 
 
@@ -180,25 +295,26 @@
     </p>
 
     <p
-            class="signature">Ik zie je echt supergraag! <br> dikke knuffel en kus <span style="font-style: normal;">😘</span>,<br>Sander
+            class="signature">Ik zie je echt supergraag! <br> dikke knuffel en kus <span
+            style="font-style: normal;">😘</span>,<br>Sander
     </p>
 </div>
 
 
 <script>
-    function showMessage(){
-        document.getElementById('start').style.display='none';
-        document.getElementById('card').style.display='block';
+    function showMessage() {
+        document.getElementById('start').style.display = 'none';
+        document.getElementById('card').style.display = 'block';
         startHearts();
     }
 
-    function startHearts(){
-        for(let i=0;i<30;i++){
-            setTimeout(()=>createHeart(), i*200);
+    function startHearts() {
+        for (let i = 0; i < 30; i++) {
+            setTimeout(() => createHeart(), i * 200);
         }
     }
 
-    function createHeart(){
+    function createHeart() {
         const heart = document.createElement('div');
         heart.classList.add('floating-heart');
         heart.textContent = '❤';
@@ -215,10 +331,7 @@
     }
 
 
-
-
-
-    function showMessage(){
+    function showMessage() {
         const start = document.getElementById('start');
         const card = document.getElementById('card');
         start.style.display = 'none';
