@@ -2,7 +2,7 @@
 <html lang="nl">
 <head>
     <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width,initial-scale=1.2"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
     <meta name="color-scheme" content="light only">
     <title>Voor Jou ❤️</title>
@@ -10,6 +10,11 @@
 
         :root {
             color-scheme: light;
+        }
+
+        html, body {
+            overflow-x: hidden;
+            width: 100%;
         }
 
 
@@ -166,6 +171,8 @@
         }
 
         .floating-heart {
+            max-width: 100vw;
+            pointer-events: none;
             position: fixed;
             bottom: -50px;
             font-size: 24px;
@@ -179,7 +186,7 @@
                 opacity: 1;
             }
             to {
-                transform: translateY(-160vh) translateX(var(--x-move));
+                transform: translate3d(var(--x-move), -160vh, 0);
                 opacity: 0.4;
             }
         }
@@ -309,8 +316,8 @@
         heart.textContent = '❤';
         const size = Math.random() * 20 + 20; // van 20px tot 40px
         heart.style.fontSize = size + 'px';
-        heart.style.left = Math.random() * 100 + 'vw';
-        heart.style.setProperty('--x-move', (Math.random() * 60 - 30) + 'vw');
+        heart.style.left = Math.random() * 100 + '%';
+        heart.style.setProperty('--x-move', (Math.random() * 40 - 20) + 'px');
         heart.style.animationDuration = (4 + Math.random() * 3) + 's';
         const colors = ['#ff4d6d', '#ff6b8a', '#ff85a0', '#ffb0c1'];
         heart.style.color = colors[Math.floor(Math.random() * colors.length)];
