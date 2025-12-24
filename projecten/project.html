@@ -4,8 +4,15 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+    <meta name="color-scheme" content="light only">
     <title>Voor Jou ❤️</title>
     <style>
+
+        :root {
+            color-scheme: light;
+        }
+
+
         body{
             margin:0; padding:0; font-family:'Georgia',serif;
             background:linear-gradient(135deg,#ffe5ec,#ffd6e6,#fff0f5);
@@ -24,6 +31,12 @@
             width:90%;
             max-width:760px;
             margin:80px auto;
+        }
+
+        .heart,
+        .floating-heart {
+            transform-origin: center;
+            will-change: transform;
         }
 
         .heart{
@@ -84,7 +97,7 @@
 
         @keyframes floatUp{
             from{transform:translateY(0) translateX(0); opacity:1;}
-            to{transform:translateY(-160vh) translateX(var(--x-move)); opacity:0.4;}
+            to{transform: translate3d(var(--x-move), -160svh, 0); opacity:0.4;}
         }
 
 
