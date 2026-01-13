@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <title>Demo Website – HTML & CSS Oefening</title>
+
+    <style>
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+            font-family: Arial, sans-serif;
+        }
+
+        h2 {
+            line-height: 1.2;
+        }
+
+
+        /* Navigatie */
+        nav {
+            background: #333;
+            padding: 15px;
+            position: sticky;
+            top: 0;
+        }
+
+        nav a {
+            margin-right: 20px;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+
+        /* Pseudo-class: hover */
+        nav a:hover {
+            color: orange;
+        }
+
+        /* Algemene layout */
+        section {
+            padding: 40px;
+            margin-top: 100px;
+        }
+
+        /* Descendant selector */
+        section p {
+            color: #444;
+            line-height: 1.6;
+        }
+
+        /* Child selector */
+        ul > li {
+            color: darkred;
+        }
+
+        /* Adjacent sibling selector */
+        h2 + p {
+            background: #fff7c2;
+            padding: 10px;
+        }
+
+        /* Class selector */
+        .highlight {
+            background: #d4ffd4;
+            padding: 15px;
+            border-left: 5px solid green;
+        }
+
+        /* ID selector */
+        #contact {
+            background: #eef;
+            border: 2px solid #99c;
+        }
+
+        /* --- PSEUDO-ELEMENTEN --- */
+
+        h2::before {
+            content: "";
+            display: inline-block;
+            width: 60px; /* pas aan naar gewenste grootte */
+            height: 60px;
+            background-image: url("../labo_7/afbeeldingen_labo_7/header.jpg");
+            background-size: contain;
+            background-repeat: no-repeat;
+            vertical-align: middle; /* zorgt dat het naast de tekst staat */
+            margin-right: 10px; /* ruimte tussen afbeelding en tekst */
+        }
+
+        /* ::after */
+        h2::after {
+            content: " ◆";
+            color: orange;
+        }
+
+        /* ::first-letter */
+        p::first-letter {
+            font-size: 200%;
+            font-weight: bold;
+            color: darkblue;
+        }
+
+        /* ::first-line */
+        p::first-line {
+            text-transform: uppercase;
+        }
+
+        /* ::selection */
+        ::selection {
+            background: black;
+            color: white;
+        }
+
+        h2::selection {
+            color: red;
+            background: lightgreen;
+        }
+
+        /* ::marker */
+        li::marker {
+            color: purple;
+            font-size: 20px;
+        }
+
+        /* ::placeholder */
+        input::placeholder {
+            color: gray;
+            font-style: italic;
+        }
+
+        /* --- PSEUDO-CLASSES --- */
+
+        /* :hover */
+        button:hover {
+            background: #333;
+            color: white;
+            cursor: pointer;
+        }
+
+        /* :focus */
+        input:focus {
+            border: 2px solid blue;
+            outline: none;
+        }
+
+        /* :active */
+        button:active {
+            transform: scale(0.95);
+        }
+
+        /* :nth-child */
+        ul li:nth-child(2) {
+            font-weight: bold;
+        }
+
+        /* :not */
+        p:not(.highlight) {
+            margin-bottom: 20px;
+        }
+
+        /* :first-child */
+        section p:first-child {
+            border-left: 4px solid #ccc;
+            padding-left: 10px;
+        }
+
+
+    </style>
+</head>
+
+<body>
+
+<nav>
+    <a href="#home">Home</a>
+    <a href="#diensten">Diensten</a>
+    <a href="#over">Over ons</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<!-- HOME -->
+<section id="home">
+    <h2>Welkom op onze website</h2>
+    <p>Dit is een voorbeeldtekst die toont hoe een echte website eruitziet.</p>
+    <p>We gebruiken dit document om HTML, CSS, selectors en pseudo-elementen te oefenen.</p>
+
+    <div class="highlight">
+        Deze tekst is gemarkeerd met een class.
+    </div>
+</section>
+
+<!-- DIENSTEN -->
+<section id="diensten">
+    <h2>Onze diensten</h2>
+    <p>Hieronder vind je een lijst van wat we aanbieden.</p>
+
+    <ul>
+        <li>Webdesign</li>
+        <li>Webontwikkeling</li>
+        <li>SEO optimalisatie</li>
+    </ul>
+
+    <button>Meer info</button>
+</section>
+
+<!-- OVER ONS -->
+<section id="over">
+    <h2>Over ons</h2>
+    <p>Wij zijn een creatief team dat moderne websites bouwt.</p>
+    <p>Met dit document kun je alle CSS-technieken testen.</p>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+    <h2>Contact</h2>
+    <p>Wil je ons bereiken? Vul hieronder je gegevens in.</p>
+
+    <input type="text" placeholder="Je naam">
+    <br><br>
+    <input type="email" placeholder="Je e-mailadres">
+    <br><br>
+    <button>Verstuur</button>
+</section>
+
+</body>
+</html>
