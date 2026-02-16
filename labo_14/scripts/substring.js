@@ -1,9 +1,9 @@
 const setup = () => {
     // deze code wordt pas uitgevoerd als de pagina volledig is ingeladen
-    document.getElementById("bereken").addEventListener("click", calculate);
+    document.getElementById("bereken").addEventListener("click", bereken);
 };
 
-const calculate = () => {
+const bereken = () => {
     const input = document.getElementById("input").value;
     const start = document.getElementById("start").value;
     const eind = document.getElementById("eind").value;
