@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <title>Demonstratie slider</title>
+    <link rel="stylesheet" href="../styles/demo_slider.css">
+</head>
+<body>
+<div>
+    <p>Open het console venster, versleep daarna de slider hieronder en kijk welke berichten er komen</p>
+    <input type="range" class="slider" value="50" min="0" max="100">
+</div>
+<div>
+    <p>Een gekleurd blokje :</p>
+    <div class="colorDemo"></div>
+
+    <hr style="height: 5px; background-color: black;">
+
+    <h2>Waar wordt de event listener gekoppeld aan de slider?</h2>
+    <p>in de setup</p>
+    <h2>Waarom moeten we die op twee soorten events koppelen?</h2>
+    <p>Chrome en Safari verwarren "change" en "input". </p>
+    <h2>In de CSS file wordt nergens een rode kleur opgegeven, waar wordt dan wel de rode kleur van het blokje ingesteld?</h2>
+    <p>Door deze regel: <code style="background: #e0e5e3">colorDemos[0].style.backgroundColor="red";</code></p>
+    <h2>Waarom schrijven we telkens sliders[0] en colorDemos[0] en niet gewoon sliders of colorDemos?</h2>
+    <p>getELementByClassName geeft een collectie terug want meerdere HTML elementen kunnen dezelfde klasse hebben. Hier heeft iedere klasse maar 1 element en kunnen we gewoon de eerste waarde nemen (op plaats 0)</p>
+    <h2>Waar vind je de CSS-properties die programmatorisch werden ingesteld?</h2>
+    <p>In Chrome Developer Tools -> Elements -> rechts in Styles-paneel -> Styles -> bovenaan bij element.style. Daar komen alle inline styles die door JavaScript zijn toegevoegd, zoals de rode achtergrondkleur van het blokje.</p>
+    <img src="../images/img.png"  width="50%" height="auto" style="display: block; margin-left: auto; margin-right: auto;">
+</div>
+<script src="../scripts/demo_slider.js"></script>
+</body>
+</html>
