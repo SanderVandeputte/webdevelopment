@@ -1,5 +1,5 @@
 const setup = () => {
-    const zin = "De man rief de";
+    const zin = "Gisteren zat de jongen op de stoep en at de helft van de appel";
     let resultaat = "";
     let output = document.getElementById("zin");
 
