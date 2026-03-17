@@ -88,7 +88,7 @@ const valideerAantalKinderen = () => {
 
 const valideerForm = () => {
     resetValidatie();
-    const ok = valideerVoornaam() & valideerFamilienaam() & valideerGeboortedatum() & valideerEmail() & valideerAantalKinderen();
+    const ok = valideerVoornaam() && valideerFamilienaam() && valideerGeboortedatum() && valideerEmail() && valideerAantalKinderen();
     if (ok) alert("proficiat!");
 };
 
