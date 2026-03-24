@@ -4,8 +4,6 @@ const setup = () => {
         item.setAttribute("class", "listitem");
     })
 
-
-
     const style = document.createElement("style")
     style.innerText = ".listitem {color: red;}";
     document.head.appendChild(style);
@@ -15,11 +13,5 @@ const setup = () => {
     image.setAttribute("alt", "een afbeelding");
     document.body.appendChild(image);
 }
-
-
-
-
-
-
 
 window.addEventListener('load', setup)

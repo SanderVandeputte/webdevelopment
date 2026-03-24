@@ -1,9 +1,6 @@
 const setup = () => {
-
     let paragraaf = document.getElementById("abc");
-    paragraaf.parentNode;
-    paragraaf.childNodes;
-}
-
+    console.log(paragraaf);
+};
 
 window.addEventListener("load", setup);
