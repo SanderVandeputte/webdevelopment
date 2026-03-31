@@ -3,14 +3,12 @@ let global = {
     IMAGE_SIZE: 48, // grootte van de figuur
     IMAGE_PATH_PREFIX: "../images/hit_an_object/", // map van de figuren
     IMAGE_PATH_SUFFIX: ".png", // extensie van de figuren
-    MOVE_DELAY: 1000, // aantal ms voor een nieuwe afbeelding verschijnt
-    score: 0, // aantal hits
+    MOVE_DELAY: 1000, // duurt 1 seconde totdat volgende afbeelding
+    score: 0, // aantal punten
     timeoutId: 0 // id van de timeout timer, zodat we kunnen annuleren
 }
 
 let timerId=0;
-
-
 
 const setup = () =>{
     let image = document.getElementById('target');
@@ -21,7 +19,6 @@ const setup = () =>{
     timerId=setInterval(consoleMelding, global.MOVE_DELAY);
 
 }
-
 
 const startGame = () => {
     // score resetten
@@ -36,9 +33,6 @@ const startGame = () => {
     timerId = setInterval(consoleMelding, global.MOVE_DELAY);
     moveImage();
 };
-
-
-
 
 const consoleMelding = () => {
     console.log("1 seconde gepasseerd")
@@ -61,9 +55,7 @@ const moveImage = () => {
     image.src = global.IMAGE_PATH_PREFIX + randomImage + global.IMAGE_PATH_SUFFIX;
 
     global.timeoutId = setTimeout(moveImage, global.MOVE_DELAY);
-
 }
-
 
 const geklikt = () => {
     let image = document.getElementById("target");
@@ -77,15 +69,10 @@ const geklikt = () => {
         image.style.display = "none";
         return;
     }
-
     global.score++;
     document.getElementById("score").innerText = global.score;
     clearTimeout(global.timeoutId);
     moveImage();
 
 };
-
-
-
-
 window.addEventListener("load", setup);
