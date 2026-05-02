@@ -1,0 +1,29 @@
+body {
+    background-color: #ffffff;
+    font-family: Arial, sans-serif;
+}
+
+.history-card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    color: white;
+}
+
+.history-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.search-title {
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.search-text {
+    word-break: break-word;
+}
+
+#btn {
+    background-color: #28a745;
+    color: white;
+    border: none;
+}
