@@ -1,4 +1,4 @@
-const global = {
+ const global = {
     huidigeKleur: "rgb(128, 128, 128)"
 };
 

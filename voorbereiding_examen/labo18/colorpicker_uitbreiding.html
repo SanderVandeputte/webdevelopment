@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Colorpicker</title>
+
+    <style>
+        #color-box {
+            width: 150px;
+            height: 150px;
+            border: 2px solid #333;
+            border-radius: 6px;
+        }
+    </style>
+
+</head>
+<body>
+
+<div class="redColor">
+    <input id="redSlider" type="range" min="0" max="255" step="1" value="128"> <span id="spanRed"> red: </span>
+</div>
+
+<div class="greenColor">
+    <input id="greenSlider" type="range" min="0" max="255" step="1" value="128"> <span id="spanGreen"> green: </span>
+</div>
+<div class="blueColor">
+    <input id="blueSlider" type="range" min="0" max="255" step="1" value="128"> <span id="spanBlue"> blue: </span>
+</div>
+
+<button id="save">save</button>
+
+<div id="color-box"></div>
+<div id="swatches"></div>
+<script src="colorpicker_uitbreiding.js"></script>
+
+</body>
+</html>
