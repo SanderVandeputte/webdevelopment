@@ -7,7 +7,9 @@ const setup = () => {
         const taal = document.getElementsByName("moedertaal");
         let moedertaal = "";
         for (let i = 0; i < taal.length; i++) {
-            if (taal[i].checked) moedertaal = taal[i].value;
+            if (taal[i].checked) {
+                moedertaal = taal[i].value;
+            }
         }
 
         const land = document.getElementById("land").value;
@@ -15,7 +17,9 @@ const setup = () => {
         const opties = document.getElementById("bestelling").options;
         const bestelling = [];
         for (let i = 0; i < opties.length; i++) {
-            if (opties[i].selected) bestelling.push(opties[i].value);
+            if (opties[i].selected){
+                bestelling.push(opties[i].value);
+            }
         }
 
         const resultaat = document.getElementById("resultaat");
@@ -23,7 +27,7 @@ const setup = () => {
             "Is roker: " + roker +
             "<br>Moedertaal: " + moedertaal +
             "<br>Buurland: " + land +
-            "<br>Bestelling: " + bestelling.join(", ");
+            "<br>Bestelling: " + bestelling.join(" - ");
 
         console.log("Is roker: " + roker);
         console.log("Moedertaal: " + moedertaal);

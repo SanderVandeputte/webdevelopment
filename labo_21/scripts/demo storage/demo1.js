@@ -1,4 +1,6 @@
-let teller=0; // de globale variabele voor onze teller
+const global = {
+    teller: 0, // de globale variabele voor onze teller
+}
 
 const setup =() => {
 	let btnVerhoog=document.getElementById("btnVerhoog");
@@ -7,8 +9,8 @@ const setup =() => {
 
 const verhoog =() => {
 	let txtResult=document.getElementById("txtResult");
-	teller++;
-	txtResult.innerHTML="De waarde van de teller is " + teller;
+    global.teller++;
+	txtResult.innerHTML="De waarde van de teller is " + global.teller;
 };
 
 window.addEventListener("load", setup);

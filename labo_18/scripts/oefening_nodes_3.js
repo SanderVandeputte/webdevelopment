@@ -5,8 +5,9 @@ const setup = () => {
 
 const toevoegenP = () => {
     const p = document.createElement("p");
+    const div = document.getElementById("myDIV")
     p.textContent = "Toegevoegde paragraaf";
-    document.querySelector("#myDIV").appendChild(p);
+    div.appendChild(p);
 }
 
 window.addEventListener('load', setup)

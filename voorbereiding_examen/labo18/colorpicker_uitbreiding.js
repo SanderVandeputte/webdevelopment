@@ -76,6 +76,8 @@ const maakSwatch = () => {
     swatch.style.border = "1px solid #000";
     swatch.style.backgroundColor = kleur;
 
+    swatch.style.display = "inline-block";
+
     console.log(kleur);
 }
 
@@ -83,7 +85,7 @@ const maakSwatch = () => {
 
 const deleteKleur = (event) =>{
     console.log("deleteKleur");
-
+    event.stopPropagation();
     const swatch = event.target.parentElement;   // het div-blokje
     swatch.remove();
 }
@@ -103,7 +105,6 @@ const swatchKlik=(event) =>{
     color_box.style.backgroundColor = kleur;
 
     global.huidigeKleur = kleur;
-    updateColor();
 }
 
 

@@ -15,21 +15,25 @@
 
 </head>
 <body>
+<div style="display: inline-block">
+    <div class="redColor">
+        <input id="redSlider" type="range" min="0" max="255" step="1" value="128"> <span id="spanRed"> red: </span>
+    </div>
 
-<div class="redColor">
-    <input id="redSlider" type="range" min="0" max="255" step="1" value="128"> <span id="spanRed"> red: </span>
+    <div class="greenColor">
+        <input id="greenSlider" type="range" min="0" max="255" step="1" value="128"> <span
+            id="spanGreen"> green: </span>
+    </div>
+    <div class="blueColor">
+        <input id="blueSlider" type="range" min="0" max="255" step="1" value="128"> <span id="spanBlue"> blue: </span>
+    </div>
 </div>
 
-<div class="greenColor">
-    <input id="greenSlider" type="range" min="0" max="255" step="1" value="128"> <span id="spanGreen"> green: </span>
-</div>
-<div class="blueColor">
-    <input id="blueSlider" type="range" min="0" max="255" step="1" value="128"> <span id="spanBlue"> blue: </span>
-</div>
+<div id="color-box" style="display: inline-block"></div>
 
-<button id="save">save</button>
+<button id="save" style="display: inline-block">save</button>
 
-<div id="color-box"></div>
+
 <div id="swatches"></div>
 <script src="colorpicker_uitbreiding.js"></script>
 

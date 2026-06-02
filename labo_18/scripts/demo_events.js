@@ -7,7 +7,12 @@ const setup = () => {
 
 
 const klik = (event) => {
-    event.target.style.color="red";
+    const txt = event.target;
+    if (txt.style.color === "red"){
+        event.target.style.color="black";
+    } else{
+        event.target.style.color = "red";
+    }
 };
 
 window.addEventListener("load", setup);

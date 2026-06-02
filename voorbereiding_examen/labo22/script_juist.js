@@ -31,6 +31,7 @@ const voerCommandoUit = () => {
             instagram(command.substr(3));
         }
         else {
+
             alert("Unknown command prefix");
         }
         txtCommandoInput.value = "";

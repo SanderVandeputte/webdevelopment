@@ -14,7 +14,7 @@ const verhoog =() => {
 			clickCount=parseInt(clickCount)+1;
 		} else {
 			clickCount=1;
-			
+
 		}
 		sessionStorage.setItem("demo.clickCount", clickCount.toString());
 		txtResult.innerHTML="De waarde van de teller is " + clickCount;
@@ -22,3 +22,39 @@ const verhoog =() => {
 };
 
 window.addEventListener("load", setup);
+
+
+
+
+
+/*
+
+
+const setup = () => {
+    let btnVerhoog = document.getElementById("btnVerhoog");
+    btnVerhoog.addEventListener("click", verhoog);
+
+    // teller aanmaken als hij nog niet bestaat
+    if (sessionStorage.getItem("demo.clickCount") === null) {
+        sessionStorage.setItem("demo.clickCount", "0");
+    }
+
+    // huidige waarde tonen
+    document.getElementById("txtResult").innerHTML =
+        "De waarde van de teller is " + sessionStorage.getItem("demo.clickCount");
+};
+
+
+const verhoog = () => {
+    let txtResult = document.getElementById("txtResult");
+
+    let clickCount = parseInt(sessionStorage.getItem("demo.clickCount"));
+    clickCount++;
+
+    sessionStorage.setItem("demo.clickCount", clickCount.toString());
+
+    txtResult.innerHTML = "De waarde van de teller is " + clickCount;
+};
+
+
+* */

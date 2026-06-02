@@ -21,7 +21,6 @@ const valideerVoorNaam = () =>{
         console.log("Naam te lang")
         fout_voornaam.textContent = "Naam met niet langer dan 30 tekens zijn."
         fout_voornaam.style.color= "red"
-        voornaam.value = ""
     }
 }
 

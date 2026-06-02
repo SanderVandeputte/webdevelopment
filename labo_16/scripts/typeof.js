@@ -4,7 +4,7 @@ const setup = () => {
 
     const paragraaf = document.getElementsByTagName("p");
 
-    for (let i = 0; i < paragraaf.length; i++) {
+    for (let i = 0; i < waarden.length; i++) {
         paragraaf[i].innerHTML += "<strong>    ==> typeof: " + typeof waarden[i] + "</strong>";
     }
 };

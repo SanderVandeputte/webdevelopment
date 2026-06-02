@@ -1,4 +1,4 @@
-let UPDATE_DELAY=50; // constante voor timer delay, in milliseconden
+let UPDATE_DELAY=3; // constante voor timer delay, in milliseconden
 let speedX;
 let speedY;
 
@@ -32,8 +32,8 @@ const updateSize = () => {
 	speelveld.style.width=window.innerWidth+"px";
 	speelveld.style.height=window.innerHeight+"px";
 	
-	speedX=window.innerWidth/(1000/UPDATE_DELAY); // 1x per seconde ganse breedte afleggen
-	speedY=window.innerHeight/(1000/UPDATE_DELAY); // 1x per seconde ganse hoogte afleggen
+	speedX=window.innerWidth/(2500/UPDATE_DELAY); // 1x per seconde ganse breedte afleggen
+	speedY=window.innerHeight/(2500/UPDATE_DELAY); // 1x per seconde ganse hoogte afleggen
 }
 
 const moveSprite = () => {

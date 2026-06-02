@@ -20,6 +20,7 @@ const showArrowFunctie = () =>
    // uitleg: https://wesbos.com/arrow-functions-this-javascript/
 
     console.log ("arrow functie met keyword this : ", this.innerWidth); // -> je zal de breedte van het scherm krijgen (innerWidth is een property van het Window object)
+    console.log ("arrow functie met keyword this : ", this.innerHeight); // -> je zal de hoogte van het scherm krijgen (innerHeight is een property van het Window object)
 
 };
 

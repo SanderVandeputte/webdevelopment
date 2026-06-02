@@ -1,4 +1,5 @@
- const global = {
+/*
+const global = {
     huidigeKleur: "rgb(128, 128, 128)"
 };
 
@@ -96,3 +97,171 @@ const update = () => {
 };
 
 window.addEventListener("load", initialize);
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const global = {
+    huidigKleur: "rgb(128, 128, 128)",
+}
+
+let opgeslagenKleuren = [];
+
+const setup = () =>{
+
+    const saveBtn = document.getElementById("btnSave");
+    saveBtn.addEventListener("click", makeSwatch)
+
+
+    document.querySelectorAll(".slider").forEach(slider => {
+        slider.addEventListener("input", updateColor);
+    });
+
+    document.getElementById("btnSave").addEventListener("click", makeSwatch);
+
+
+    updateColor()
+
+
+    const opgeslagen = localStorage.getItem("kleur");
+
+    // 2. omzetten naar array (of lege array)
+    if (opgeslagen !== null) {
+        opgeslagenKleuren = JSON.parse(opgeslagen);
+    } else {
+        opgeslagenKleuren = [];
+    }
+
+
+    for (let i = 0; i < opgeslagenKleuren.length; i++) {
+        let kleur = opgeslagenKleuren[i];
+        maakSwatchVanKleur(kleur);
+    }
+
+
+
+
+
+}
+
+const updateColor = () =>{
+    const redSlider = document.getElementById("sldRed").value;
+    const greenSlider = document.getElementById("sldGreen").value;
+    const blueSlider = document.getElementById("sldBlue").value;
+
+    const kleur = "rgb(" + redSlider + ", " + greenSlider + ", " + blueSlider + ")"
+    global.huidigKleur = kleur;
+    //console.log(global.huidigKleur);
+    const swatch = document.getElementById("swatch");
+    swatch.style.backgroundColor = kleur;
+
+}
+
+const maakSwatchVanKleur = (kleur) => {
+    const nieuweSwatch = document.createElement("div");
+    const swatchContainer = document.getElementById("swatchComponents");
+
+    nieuweSwatch.className = "swatch";
+    nieuweSwatch.style.height = "75px";
+    nieuweSwatch.style.width = "75px";
+    nieuweSwatch.style.margin = "5px";
+    nieuweSwatch.style.backgroundColor = kleur;
+
+    nieuweSwatch.addEventListener("click", klikSwatch);
+
+    const deleteBtn = document.createElement("button");
+    deleteBtn.textContent = "X";
+    deleteBtn.style.color = "red";
+    deleteBtn.style.float = "right";
+    deleteBtn.addEventListener("click", verwijderSwatch);
+
+    nieuweSwatch.appendChild(deleteBtn);
+    swatchContainer.appendChild(nieuweSwatch);
+};
+
+const makeSwatch = () =>{
+    // DOM-swatch maken
+    maakSwatchVanKleur(global.huidigKleur);
+
+    // kleur opslaan in array
+    opgeslagenKleuren.push(global.huidigKleur);
+
+    // array opslaan in localStorage
+    localStorage.setItem("kleur", JSON.stringify(opgeslagenKleuren));
+}
+
+
+const verwijderSwatch = (event) => {
+    event.stopPropagation();
+
+    const swatch = event.target.parentElement;
+
+    // 1. Alle swatches ophalen
+    const alleSwatches = Array.from(document.querySelectorAll("#swatchComponents div"));
+
+    // 2. Index bepalen van de aangeklikte swatch
+    const index = alleSwatches.indexOf(swatch);
+
+    // 3. Verwijderen uit array
+    if (index !== -1) {
+        opgeslagenKleuren.splice(index, 1);
+    }
+
+    // 4. Opslaan in localStorage
+    localStorage.setItem("kleur", JSON.stringify(opgeslagenKleuren));
+
+    // 5. Verwijderen uit DOM
+    swatch.remove();
+};
+
+
+
+const klikSwatch = (event) =>{
+    let kleur = event.target.style.backgroundColor;
+    //console.log(kleur);
+    const kleurBlok = document.getElementById("swatch");
+    global.huidigKleur = kleur;
+
+    console.log(global.huidigKleur);
+
+    kleurBlok.style.backgroundColor = global.huidigKleur;
+}
+
+
+window.addEventListener("load", setup);
